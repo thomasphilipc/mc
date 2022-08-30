@@ -1,0 +1,83 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Jubaili Bros - UAE Branch"
+    },
+    "createdTime" : 1623245250992,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "71312b00-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "label" : "Zone",
+    "name" : "UAE",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Region"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "0c9d7ff0-c92a-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "71312b00-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "71312b00-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "e07905a0-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "71312b00-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "f49cf780-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "71312b00-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "08700a40-c927-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 46.25,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837242858,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

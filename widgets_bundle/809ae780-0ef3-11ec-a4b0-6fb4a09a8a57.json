@@ -1,0 +1,50 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "date",
+    "createdTime" : 1630919953912,
+    "description" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "809ae780-0ef3-11ec-a4b0-6fb4a09a8a57"
+    },
+    "image" : null,
+    "tenantId" : null,
+    "title" : "Date"
+  },
+  "widgets" : [ {
+    "alias" : "datewise",
+    "name" : "datewise",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://canvasjs.com/assets/script/canvasjs.min.js"
+      } ],
+      "templateHtml" : "<div id=\"chartContainer\" style=\"height: 388px; width: 188%;\"></div>",
+      "templateCss" : "",
+      "controllerScript" : "self.onInit = function() {\n\nvar chart = new CanvasJS.Chart(\"chartContainer\", {\n\tanimationEnabled: true,\n\ttheme: \"light2\",\n\ttitle:{\n\t\ttext: \"Site Traffic\"\n\t},\n\taxisX:{\n\t\tvalueFormatString: \"DD - 08\",\n\t\tcrosshair: {\n\t\t\tenabled: true,\n\t\t\tsnapToDataPoint: true\n\t\t}\n\t},\n\taxisY: {\n\t\ttitle: \"Number of Visits\",\n\t\tincludeZero: true,\n\t\tcrosshair: {\n\t\t\tenabled: true\n\t\t}\n\t},\n\ttoolTip:{\n\t\tshared:true\n\t},  \n\tlegend:{\n\t\tcursor:\"pointer\",\n\t\tverticalAlign: \"bottom\",\n\t\thorizontalAlign: \"left\",\n\t\tdockInsidePlotArea: true,\n\t\titemclick: toogleDataSeries\n\t},\n\tdata: [{\n\t\ttype: \"line\",\n\t\tshowInLegend: true,\n\t\tname: \"Total Visit\",\n\t\tmarkerType: \"square\",\n\t\txValueFormatString: \"DD MMM, YYYY\",\n\t\tcolor: \"#F88888\",\n\t\tdataPoints: [\n\t\t\t{ x: new Date(2021, 8, 3), y: 658 },\n\t\t\t{ x: new Date(2021, 8, 4), y: 888 },\n\t\t\t{ x: new Date(2021, 8, 5), y: 818 },\n\t\t\t{ x: new Date(2021, 8, 6), y: 658 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 834 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 963 },\n\t\t\t{ x: new Date(2021, 8, 9), y: 848 },\n\t\t\t{ x: new Date(2021, 8, 18), y: 853 },\n\t\t\t{ x: new Date(2021, 8, 11), y: 869 },\n\t\t\t{ x: new Date(2021, 8, 12), y: 943 },\n\t\t\t{ x: new Date(2021, 8, 13), y: 988 },\n\t\t\t{ x: new Date(2021, 8, 14), y: 869 },\n\t\t\t{ x: new Date(2021, 8, 15), y: 898 },\n\t\t\t{ x: new Date(2021, 8, 16), y: 938 }\n\t\t]\n\t},\n\t{\n\t\ttype: \"line\",\n\t\tshowInLegend: true,\n\t\tname: \"Total Visit\",\n\t\tmarkerType: \"square\",\n\t\txValueFormatString: \"DD MMM, YYYY\",\n\t\tcolor: \"lightblue\",\n\t\tdataPoints: [\n\t\t\t{ x: new Date(2021, 8, 3), y: 518 },\n\t\t\t{ x: new Date(2021, 8, 4), y: 568 },\n\t\t\t{ x: new Date(2021, 8, 5), y: 548 },\n\t\t\t{ x: new Date(2021, 8, 6), y: 558 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 544 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 693 },\n\t\t\t{ x: new Date(2021, 8, 9), y: 658 },\n\t\t\t{ x: new Date(2021, 8, 18), y: 663 },\n\t\t\t{ x: new Date(2021, 8, 11), y: 639 },\n\t\t\t{ x: new Date(2021, 8, 12), y: 683 },\n\t\t\t{ x: new Date(2021, 8, 13), y: 668 },\n\t\t\t{ x: new Date(2021, 8, 14), y: 562 },\n\t\t\t{ x: new Date(2021, 8, 15), y: 643 },\n\t\t\t{ x: new Date(2021, 8, 16), y: 588 }\n\t\t]\n    },\n    {\n        type: \"line\",\n\t\tshowInLegend: true,\n\t\tname: \"Total Visit\",\n\t\tmarkerType: \"square\",\n\t\txValueFormatString: \"DD MMM, YYYY\",\n\t\tcolor: \"green\",\n\t\tdataPoints: [\n\t\t\t{ x: new Date(2021, 8, 3), y: 588 },\n\t\t\t{ x: new Date(2021, 8, 4), y: 543 },\n\t\t\t{ x: new Date(2021, 8, 5), y: 541 },\n\t\t\t{ x: new Date(2021, 8, 6), y: 583 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 542 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 621 },\n\t\t\t{ x: new Date(2021, 8, 9), y: 685 },\n\t\t\t{ x: new Date(2021, 8, 18), y: 685 },\n\t\t\t{ x: new Date(2021, 8, 11), y: 684 },\n\t\t\t{ x: new Date(2021, 8, 12), y: 683 },\n\t\t\t{ x: new Date(2021, 8, 13), y: 665 },\n\t\t\t{ x: new Date(2021, 8, 14), y: 562 },\n\t\t\t{ x: new Date(2021, 8, 15), y: 682 },\n\t\t\t{ x: new Date(2021, 8, 16), y: 582 }\n\t\t]\n    },\n    {\n        type: \"line\",\n\t\tshowInLegend: true,\n\t\tname: \"Total Visit\",\n\t\tmarkerType: \"square\",\n\t\txValueFormatString: \"DD MMM, YYYY\",\n\t\tcolor: \"#000\",\n\t\tdataPoints: [\n\t\t\t{ x: new Date(2021, 8, 3), y: 488 },\n\t\t\t{ x: new Date(2021, 8, 4), y: 443 },\n\t\t\t{ x: new Date(2021, 8, 5), y: 441 },\n\t\t\t{ x: new Date(2021, 8, 6), y: 483 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 442 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 521 },\n\t\t\t{ x: new Date(2021, 8, 9), y: 585 },\n\t\t\t{ x: new Date(2021, 8, 18), y: 585 },\n\t\t\t{ x: new Date(2021, 8, 11), y: 584 },\n\t\t\t{ x: new Date(2021, 8, 12), y: 583 },\n\t\t\t{ x: new Date(2021, 8, 13), y: 565 },\n\t\t\t{ x: new Date(2021, 8, 14), y: 462 },\n\t\t\t{ x: new Date(2021, 8, 15), y: 582 },\n\t\t\t{ x: new Date(2021, 8, 16), y: 482 }\n\t\t]\n\t}]\n});\nchart.render();\n\nfunction toogleDataSeries(e){\n\tif (typeof(e.dataSeries.visible) === \"undefined\" || e.dataSeries.visible) {\n\t\te.dataSeries.visible = false;\n\t} else{\n\t\te.dataSeries.visible = true;\n\t}\n\tchart.render();\n}\n\n}\nself.actionSources = function() {\n    return {\n        'elementClick': {\n            name: 'widget-action.element-click',\n            multiple: true\n        }\n    };\n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"required\": [\"cardHtml\"],\n        \"properties\": {\n            \"cardCss\": {\n                \"title\": \"CSS\",\n                \"type\": \"string\",\n                \"default\": \".card {\\n font-weight: bold; \\n}\"\n            },\n            \"cardHtml\": {\n                \"title\": \"HTML\",\n                \"type\": \"string\",\n                \"default\": \"<div class='card'>HTML code here</div>\"\n            }\n        }\n    },\n    \"form\": [\n        {\n            \"key\": \"cardCss\",\n            \"type\": \"css\"\n        },           \n        {\n            \"key\": \"cardHtml\",\n            \"type\": \"html\"\n        }    \n    ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"datewise\",\"dropShadow\":true}"
+    },
+    "bundleAlias" : "date",
+    "createdTime" : 1630920079223,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "cb4bd870-0ef3-11ec-84b2-053b10063941"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  } ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

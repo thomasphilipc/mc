@@ -1,0 +1,277 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "cards",
+    "createdTime" : 1630906078925,
+    "description" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "3277e7d0-0ed3-11ec-a4b0-6fb4a09a8a57"
+    },
+    "image" : null,
+    "tenantId" : null,
+    "title" : "Custom charts"
+  },
+  "widgets" : [ {
+    "alias" : "chart2",
+    "name" : "Chart",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://canvasjs.com/assets/script/canvasjs.min.js"
+      } ],
+      "templateHtml" : "<div id=\"chartContainer2\" style=\"height: 100%; width: 100%;\"></div>",
+      "templateCss" : "",
+      "controllerScript" : "self.onInit = function() {\r\nvar chart = new CanvasJS.Chart(\"chartContainer2\", {\r\n\t\t\t\tanimationEnabled: true,\r\n\t\t\t\ttheme: \"light2\",\r\n\r\n\t\t\t\ttitle: {\r\n\t\t\t\t\ttext: \"Downtime Category [Top 5]\"\r\n\t\t\t\t},\r\n\t\t\t\taxisY: {\r\n\t\t\t\t\ttitle: \"Minutes\"\r\n\t\t\t\t},\r\n\t\t\t\tdata: [{\r\n\t\t\t\t\ttype: \"column\",\r\n\t\t\t\t\tshowInLegend: true,\r\n\t\t\t\t\tlegendMarkerColor: \"grey\",\r\n\t\t\t\t\tcolor: \"blue\",\r\n\r\n\t\t\t\t\tdataPoints: [\r\n\t\t\t\t\t\t{ y: 150, label: \"5\" },\r\n\t\t\t\t\t\t{ y: 100, label: \"10\" },\r\n\t\t\t\t\t\t{ y: 50, label: \"15\" },\r\n\t\t\t\t\t\t{ y: 0, label: \"20\" },\r\n\t\t\t\t\t]\r\n\t\t\t\t}]\r\n\t\t\t});\r\n\r\n\t\t\tchart.render();\r\n}\r\n\r\nself.actionSources = function() {\r\n    return {\r\n        'elementClick': {\r\n            name: 'widget-action.element-click',\r\n            multiple: true\r\n        }\r\n    };\r\n}\r\n\r\nself.onDestroy = function() {\r\n}\r\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"required\": [\"cardHtml\"],\n        \"properties\": {\n            \"cardCss\": {\n                \"title\": \"CSS\",\n                \"type\": \"string\",\n                \"default\": \".card {\\n font-weight: bold; \\n}\"\n            },\n            \"cardHtml\": {\n                \"title\": \"HTML\",\n                \"type\": \"string\",\n                \"default\": \"<div class='card'>HTML code here</div>\"\n            }\n        }\n    },\n    \"form\": [\n        {\n            \"key\": \"cardCss\",\n            \"type\": \"css\"\n        },           \n        {\n            \"key\": \"cardHtml\",\n            \"type\": \"html\"\n        }    \n    ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Chart\",\"dropShadow\":true}"
+    },
+    "bundleAlias" : "cards",
+    "createdTime" : 1630907557145,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "a38e6090-0ed6-11ec-84b2-053b10063941"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  }, {
+    "alias" : "comments",
+    "name" : "Comments",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      } ],
+      "templateHtml" : "\n    <h1><i class=\"fas fa-info-circle\"></i> Doses</h1>\n    <div class=\"f1\">\n        F1<br>\n        <div class=\"light\">WC:DAWGYY2/1703-19107-1309</div>\n    </div>\n    <div class=\"R1\">\n        R1\n        <div class=\"light\">WC:DAWGYY2/1703-19107-1309</div>\n    </div>\n    <h1><i class=\"far fa-comments\"></i> ProductComments</h1>\n    <h3>Must Wear Gloves When Handling Flora<br> Substrate </h3>\n    <h3>Lot Uses FLORA Substrate </h3>\n    <h1><i class=\"far fa-comments\"></i> Order Comments</h1>\n    <h3>No Order Comments</h3>\n",
+      "templateCss" : "#container {\n    overflow: auto;\n}\n\n.tbDatasource-container {\n    margin: 5px;\n    padding: 8px;\n}\n\n.tbDatasource-title {\n    font-size: 1.200rem;\n    font-weight: 500;\n    padding-bottom: 10px;\n}\n\n.tbDatasource-table {\n    width: 100%;\n    box-shadow: 0 0 10px #ccc;\n    border-collapse: collapse;\n    white-space: nowrap;\n    font-size: 1.000rem;\n    color: #757575;\n}\n\n.tbDatasource-table td {\n    position: relative;\n    border-top: 1px solid rgba(0, 0, 0, 0.12);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.12);\n    padding: 0px 18px;\n    box-sizing: border-box;\n}\n .f1{\n            width:100%;\n            background: rgb(228, 228, 228);\n            color:black;\n            font-size: 20px;\n        }\n        .light{\n            color:silver;\n        }\n        .R1{\n            width:100%;\n            background: #ffffff;\n            color:black;\n            font-size: 20px;\n        }",
+      "controllerScript" : "self.onInit = function() {\n    \n    self.ctx.datasourceTitleCells = [];\n    self.ctx.valueCells = [];\n    self.ctx.labelCells = [];\n    \n    for (var i=0; i < self.ctx.datasources.length; i++) {\n        var tbDatasource = self.ctx.datasources[i];\n\n        var datasourceId = 'tbDatasource' + i;\n        self.ctx.$container.append(\n            \"<div id='\" + datasourceId +\n            \"' class='tbDatasource-container'></div>\"\n        );\n\n        var datasourceContainer = $('#' + datasourceId,\n            self.ctx.$container);\n\n        datasourceContainer.append(\n            \"<div class='tbDatasource-title'>\" +\n            tbDatasource.name + \"</div>\"\n        );\n        \n        var datasourceTitleCell = $('.tbDatasource-title', datasourceContainer);\n        self.ctx.datasourceTitleCells.push(datasourceTitleCell);\n        \n        var tableId = 'table' + i;\n        datasourceContainer.append(\n            \"<table id='\" + tableId +\n            \"' class='tbDatasource-table'><col width='30%'><col width='70%'></table>\"\n        );\n        var table = $('#' + tableId, self.ctx.$container);\n\n        for (var a = 0; a < tbDatasource.dataKeys.length; a++) {\n            var dataKey = tbDatasource.dataKeys[a];\n            var labelCellId = 'labelCell' + a;\n            var cellId = 'cell' + a;\n            table.append(\"<tr><td id='\" + labelCellId + \"'>\" + dataKey.label +\n                \"</td><td id='\" + cellId +\n                \"'></td></tr>\");\n            var labelCell = $('#' + labelCellId, table);\n            self.ctx.labelCells.push(labelCell);\n            var valueCell = $('#' + cellId, table);\n            self.ctx.valueCells.push(valueCell);\n        }\n    }    \n    \n    self.onResize();\n}\n\nself.onDataUpdated = function() {\n    for (var i = 0; i < self.ctx.valueCells.length; i++) {\n        var cellData = self.ctx.data[i];\n        if (cellData && cellData.data && cellData.data.length > 0) {\n            var tvPair = cellData.data[cellData.data.length -\n                1];\n            var value = tvPair[1];\n            var textValue;\n            //toDo -> + IsNumber\n            \n            if (isNumber(value)) {\n                var decimals = self.ctx.decimals;\n                var units = self.ctx.units;\n                if (cellData.dataKey.decimals || cellData.dataKey.decimals === 0) {\n                    decimals = cellData.dataKey.decimals;\n                }\n                if (cellData.dataKey.units) {\n                    units = cellData.dataKey.units;\n                }\n                txtValue = self.ctx.utils.formatValue(value, decimals, units, true);\n            } else {\n                txtValue = value;\n            }\n            self.ctx.valueCells[i].html(txtValue);\n        }\n    }\n    \n    function isNumber(n) {\n        return !isNaN(parseFloat(n)) && isFinite(n);\n    }\n}\n\nself.onResize = function() {\n    var datasourceTitleFontSize = self.ctx.height/8;\n    if (self.ctx.width/self.ctx.height <= 1.5) {\n        datasourceTitleFontSize = self.ctx.width/12;\n    }\n    datasourceTitleFontSize = Math.min(datasourceTitleFontSize, 20);\n    for (var i = 0; i < self.ctx.datasourceTitleCells.length; i++) {\n        self.ctx.datasourceTitleCells[i].css('font-size', datasourceTitleFontSize+'px');\n    }\n    var valueFontSize = self.ctx.height/9;\n    var labelFontSize = self.ctx.height/9;\n    if (self.ctx.width/self.ctx.height <= 1.5) {\n        valueFontSize = self.ctx.width/15;\n        labelFontSize = self.ctx.width/15;\n    }\n    valueFontSize = Math.min(valueFontSize, 18);\n    labelFontSize = Math.min(labelFontSize, 18);\n\n    for (i = 0; i < self.ctx.valueCells; i++) {\n        self.ctx.valueCells[i].css('font-size', valueFontSize+'px');\n        self.ctx.valueCells[i].css('height', valueFontSize*2.5+'px');\n        self.ctx.valueCells[i].css('padding', '0px ' + valueFontSize + 'px');\n        self.ctx.labelCells[i].css('font-size', labelFontSize+'px');\n        self.ctx.labelCells[i].css('height', labelFontSize*2.5+'px');\n        self.ctx.labelCells[i].css('padding', '0px ' + labelFontSize + 'px');\n    }    \n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Comments\"}"
+    },
+    "bundleAlias" : "cards",
+    "createdTime" : 1630911868186,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "ad2307a0-0ee0-11ec-a4b0-6fb4a09a8a57"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  }, {
+    "alias" : "datewisechart",
+    "name" : "DatewiseChart",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://canvasjs.com/assets/script/canvasjs.min.js"
+      } ],
+      "templateHtml" : "\n<div id=\"chartContainer4\" style=\"height: 388px; width: 188%;\"></div>\n",
+      "templateCss" : "",
+      "controllerScript" : "self.onInit = function() {\n    window.onload = function () {\n\nvar chart = new CanvasJS.Chart(\"chartContainer4\", {\n\tanimationEnabled: true,\n\ttheme: \"light2\",\n\ttitle:{\n\t\ttext: \"Site Traffic\"\n\t},\n\taxisX:{\n\t\tvalueFormatString: \"DD - 08\",\n\t\tcrosshair: {\n\t\t\tenabled: true,\n\t\t\tsnapToDataPoint: true\n\t\t}\n\t},\n\taxisY: {\n\t\ttitle: \"Number of Visits\",\n\t\tincludeZero: true,\n\t\tcrosshair: {\n\t\t\tenabled: true\n\t\t}\n\t},\n\ttoolTip:{\n\t\tshared:true\n\t},  \n\tlegend:{\n\t\tcursor:\"pointer\",\n\t\tverticalAlign: \"bottom\",\n\t\thorizontalAlign: \"left\",\n\t\tdockInsidePlotArea: true,\n\t\titemclick: toogleDataSeries\n\t},\n\tdata: [{\n\t\ttype: \"line\",\n\t\tshowInLegend: true,\n\t\tname: \"Total Visit\",\n\t\tmarkerType: \"square\",\n\t\txValueFormatString: \"DD MMM, YYYY\",\n\t\tcolor: \"#F88888\",\n\t\tdataPoints: [\n\t\t\t{ x: new Date(2021, 8, 3), y: 658 },\n\t\t\t{ x: new Date(2021, 8, 4), y: 888 },\n\t\t\t{ x: new Date(2021, 8, 5), y: 818 },\n\t\t\t{ x: new Date(2021, 8, 6), y: 658 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 834 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 963 },\n\t\t\t{ x: new Date(2021, 8, 9), y: 848 },\n\t\t\t{ x: new Date(2021, 8, 18), y: 853 },\n\t\t\t{ x: new Date(2021, 8, 11), y: 869 },\n\t\t\t{ x: new Date(2021, 8, 12), y: 943 },\n\t\t\t{ x: new Date(2021, 8, 13), y: 988 },\n\t\t\t{ x: new Date(2021, 8, 14), y: 869 },\n\t\t\t{ x: new Date(2021, 8, 15), y: 898 },\n\t\t\t{ x: new Date(2021, 8, 16), y: 938 }\n\t\t]\n\t},\n\t{\n\t\ttype: \"line\",\n\t\tshowInLegend: true,\n\t\tname: \"Total Visit\",\n\t\tmarkerType: \"square\",\n\t\txValueFormatString: \"DD MMM, YYYY\",\n\t\tcolor: \"lightblue\",\n\t\tdataPoints: [\n\t\t\t{ x: new Date(2021, 8, 3), y: 518 },\n\t\t\t{ x: new Date(2021, 8, 4), y: 568 },\n\t\t\t{ x: new Date(2021, 8, 5), y: 548 },\n\t\t\t{ x: new Date(2021, 8, 6), y: 558 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 544 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 693 },\n\t\t\t{ x: new Date(2021, 8, 9), y: 658 },\n\t\t\t{ x: new Date(2021, 8, 18), y: 663 },\n\t\t\t{ x: new Date(2021, 8, 11), y: 639 },\n\t\t\t{ x: new Date(2021, 8, 12), y: 683 },\n\t\t\t{ x: new Date(2021, 8, 13), y: 668 },\n\t\t\t{ x: new Date(2021, 8, 14), y: 562 },\n\t\t\t{ x: new Date(2021, 8, 15), y: 643 },\n\t\t\t{ x: new Date(2021, 8, 16), y: 588 }\n\t\t]\n    },\n    {\n        type: \"line\",\n\t\tshowInLegend: true,\n\t\tname: \"Total Visit\",\n\t\tmarkerType: \"square\",\n\t\txValueFormatString: \"DD MMM, YYYY\",\n\t\tcolor: \"green\",\n\t\tdataPoints: [\n\t\t\t{ x: new Date(2021, 8, 3), y: 588 },\n\t\t\t{ x: new Date(2021, 8, 4), y: 543 },\n\t\t\t{ x: new Date(2021, 8, 5), y: 541 },\n\t\t\t{ x: new Date(2021, 8, 6), y: 583 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 542 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 621 },\n\t\t\t{ x: new Date(2021, 8, 9), y: 685 },\n\t\t\t{ x: new Date(2021, 8, 18), y: 685 },\n\t\t\t{ x: new Date(2021, 8, 11), y: 684 },\n\t\t\t{ x: new Date(2021, 8, 12), y: 683 },\n\t\t\t{ x: new Date(2021, 8, 13), y: 665 },\n\t\t\t{ x: new Date(2021, 8, 14), y: 562 },\n\t\t\t{ x: new Date(2021, 8, 15), y: 682 },\n\t\t\t{ x: new Date(2021, 8, 16), y: 582 }\n\t\t]\n    },\n    {\n        type: \"line\",\n\t\tshowInLegend: true,\n\t\tname: \"Total Visit\",\n\t\tmarkerType: \"square\",\n\t\txValueFormatString: \"DD MMM, YYYY\",\n\t\tcolor: \"#000\",\n\t\tdataPoints: [\n\t\t\t{ x: new Date(2021, 8, 3), y: 488 },\n\t\t\t{ x: new Date(2021, 8, 4), y: 443 },\n\t\t\t{ x: new Date(2021, 8, 5), y: 441 },\n\t\t\t{ x: new Date(2021, 8, 6), y: 483 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 442 },\n\t\t\t{ x: new Date(2021, 8, 8), y: 521 },\n\t\t\t{ x: new Date(2021, 8, 9), y: 585 },\n\t\t\t{ x: new Date(2021, 8, 18), y: 585 },\n\t\t\t{ x: new Date(2021, 8, 11), y: 584 },\n\t\t\t{ x: new Date(2021, 8, 12), y: 583 },\n\t\t\t{ x: new Date(2021, 8, 13), y: 565 },\n\t\t\t{ x: new Date(2021, 8, 14), y: 462 },\n\t\t\t{ x: new Date(2021, 8, 15), y: 582 },\n\t\t\t{ x: new Date(2021, 8, 16), y: 482 }\n\t\t]\n\t}]\n});\nchart.render();\n\nfunction toogleDataSeries(e){\n\tif (typeof(e.dataSeries.visible) === \"undefined\" || e.dataSeries.visible) {\n\t\te.dataSeries.visible = false;\n\t} else{\n\t\te.dataSeries.visible = true;\n\t}\n\tchart.render();\n}\n\n};\n\n   \n    \n}\n\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"required\": [\"cardHtml\"],\n        \"properties\": {\n            \"cardCss\": {\n                \"title\": \"CSS\",\n                \"type\": \"string\",\n                \"default\": \".card {\\n font-weight: bold; \\n}\"\n            },\n            \"cardHtml\": {\n                \"title\": \"HTML\",\n                \"type\": \"string\",\n                \"default\": \"<div class='card'>HTML code here</div>\"\n            }\n        }\n    },\n    \"form\": [\n        {\n            \"key\": \"cardCss\",\n            \"type\": \"css\"\n        },           \n        {\n            \"key\": \"cardHtml\",\n            \"type\": \"html\"\n        }    \n    ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"DatewiseChart\",\"dropShadow\":true}"
+    },
+    "bundleAlias" : "cards",
+    "createdTime" : 1630913179101,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "ba80c8d0-0ee3-11ec-84b2-053b10063941"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  }, {
+    "alias" : "doughnut",
+    "name" : "doughnut",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 8,
+      "sizeY" : 5.5,
+      "resources" : [ {
+        "url" : "https://canvasjs.com/assets/script/canvasjs.min.js",
+        "isModule" : false
+      } ],
+      "templateHtml" : "<div\n    style=\"width: 100%; height: 100%; display: flex; align-item: center; justify-content: center;\">\n    <div id=\"chartContainer3\"\n        style=\"height: 100%; width: 100%;\">\n    </div>\n\n    <div class=\"do\">\n        <h3>\n            90%\n        </h3>\n        <div class=\"oee\">\n            OEE\n        </div>\n    </div>\n    <div class=\"text\">\n        <p class=\"first\">\n            0\n        </p>\n        <p class=\"Sec\">\n            100\n        </p>\n    </div>\n</div>",
+      "templateCss" : " /*h4 {*/\n /*    position: absolute;*/\n /*    color: black;*/\n /*    margin-left: 49%;*/\n /*    margin-top: 40%;*/\n /*    z-index: 1000;*/\n /*}*/\n\n /*h5 {*/\n /*    position: absolute;*/\n /*    color: black;*/\n /*    margin: 11.5% 0 0 59%;*/\n /*    z-index: 1000;*/\n /*}*/\n\n .back {\n     width: 100%;\n     height: 100%;\n     background: white;\n }\n\n #chartContainer {\n     position: relative;\n\n }\n\n .do {\n     margin-top: 10px;\n     position: absolute;\n     width: 100%;\n     height: 100%;\n     display: flex;\n     justify-content: center;\n     align-items: center;\n     flex-direction: column;\n }\n\n .do h3 {\n     color: #000;\n }\n\n .do .oee {\n     color: gray;\n }\n \n .text .first{\n       position: absolute;\n   top: 87%;\n   left: 50%;\n    font-size: 15px;\n  \n }\n .text .Sec{\nposition: absolute;\n   top: 40%;\n   left:80%;\n   font-size: 15px;\n  \n }",
+      "controllerScript" : "self.onInit = function() {\n\n          CanvasJS.addColorSet(\"Shades\",\n        [//colorSet Array\n          \"#ffffff\",\n          \"#2F4F4F\"\n        ]);\n      var chart = new CanvasJS.Chart(\"chartContainer3\",\n        {\n          colorSet: \"Shades\",\n          title: {\n            text: \"Doughnut\",\n            fontFamily: \"Impact\",\n            fontWeight: \"normal\"\n          },\n\n          //   legend:{\n          //     verticalAlign: \"bottom\",\n          //     horizontalAlign: \"center\"\n          //   },\n          data: [\n            {\n\n              type: \"doughnut\",\n              showInLegend: false,\n              dataPoints: [\n                { y: 25.0, },\n                { y: 75.0, },\n\n              ]\n            }\n          ]\n        });\n\n\n      chart.render();\n\n}\n\nself.actionSources = function() {\n    return {\n        'elementClick': {\n            name: 'widget-action.element-click',\n            multiple: true\n        }\n    };\n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"required\": [\"cardHtml\"],\n        \"properties\": {\n            \"cardCss\": {\n                \"title\": \"CSS\",\n                \"type\": \"string\",\n                \"default\": \".card {\\n font-weight: bold; \\n}\"\n            },\n            \"cardHtml\": {\n                \"title\": \"HTML\",\n                \"type\": \"string\",\n                \"default\": \"<div class='card'>HTML code here</div>\"\n            }\n        }\n    },\n    \"form\": [\n        {\n            \"key\": \"cardCss\",\n            \"type\": \"css\"\n        },           \n        {\n            \"key\": \"cardHtml\",\n            \"type\": \"html\"\n        }    \n    ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"doughnut\",\"dropShadow\":true}"
+    },
+    "bundleAlias" : "cards",
+    "createdTime" : 1630910679527,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "e8a40f70-0edd-11ec-84b2-053b10063941"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  }, {
+    "alias" : "doughnut2",
+    "name" : "Doughnut2",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 10,
+      "sizeY" : 5.5,
+      "resources" : [ {
+        "url" : "https://canvasjs.com/assets/script/canvasjs.min.js"
+      } ],
+      "templateHtml" : "<div\n    style=\"width: 100%; height: 100%; display: flex; align-item: center; justify-content: center;\">\n    <div id=\"chartContainer3\"\n        style=\"height: 100%; width: 100%;\">\n    </div>\n\n    <div class=\"do\">\n        <h3>\n            90%\n        </h3>\n        <div class=\"oee\">\n            OEE\n        </div>\n    </div>\n    <div class=\"text\">\n        <p class=\"first\">\n            0\n        </p>\n        <p class=\"Sec\">\n            100\n        </p>\n    </div>\n</div>",
+      "templateCss" : " .back {\n     width: 100%;\n     height: 100%;\n     background: white;\n }\n\n #chartContainer3 {\n     position: relative;\n\n }\n\n .do {\n     margin-top: 10px;\n     position: absolute;\n     width: 100%;\n     height: 100%;\n     display: flex;\n     justify-content: center;\n     align-items: center;\n     flex-direction: column;\n }\n\n .do h3 {\n     color: #000;\n }\n\n .do .oee {\n     color: gray;\n }\n \n .text .first{\n       position: absolute;\n   top: 87%;\n   left: 50%;\n    font-size: 15px;\n  \n }\n .text .Sec{\nposition: absolute;\n   top: 40%;\n   left:80%;\n   font-size: 15px;\n  \n }",
+      "controllerScript" : "self.onInit = function() {\n\n          CanvasJS.addColorSet(\"Shades\",\n        [//colorSet Array\n          \"#ffffff\",\n          \"red\"\n        ]);\n      var chart = new CanvasJS.Chart(\"chartContainer3\",\n        {\n          colorSet: \"Shades\",\n          title: {\n            text: \"Doughnut\",\n            fontFamily: \"Impact\",\n            fontWeight: \"normal\"\n          },\n\n          //   legend:{\n          //     verticalAlign: \"bottom\",\n          //     horizontalAlign: \"center\"\n          //   },\n          data: [\n            {\n\n              type: \"doughnut\",\n              showInLegend: false,\n              dataPoints: [\n                { y: 25.0, },\n                { y: 75.0, },\n\n              ]\n            }\n          ]\n        });\n\n\n      chart.render();\n\n}\n\nself.actionSources = function() {\n    return {\n        'elementClick': {\n            name: 'widget-action.element-click',\n            multiple: true\n        }\n    };\n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"required\": [\"cardHtml\"],\n        \"properties\": {\n            \"cardCss\": {\n                \"title\": \"CSS\",\n                \"type\": \"string\",\n                \"default\": \".card {\\n font-weight: bold; \\n}\"\n            },\n            \"cardHtml\": {\n                \"title\": \"HTML\",\n                \"type\": \"string\",\n                \"default\": \"<div class='card'>HTML code here</div>\"\n            }\n        }\n    },\n    \"form\": [\n        {\n            \"key\": \"cardCss\",\n            \"type\": \"css\"\n        },           \n        {\n            \"key\": \"cardHtml\",\n            \"type\": \"html\"\n        }    \n    ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Doughnut2\",\"dropShadow\":true}"
+    },
+    "bundleAlias" : "cards",
+    "createdTime" : 1630914391219,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "8cfb5030-0ee6-11ec-84b2-053b10063941"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  }, {
+    "alias" : "doughnut3",
+    "name" : "Doughnut3",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 9,
+      "sizeY" : 4.5,
+      "resources" : [ {
+        "url" : "https://canvasjs.com/assets/script/canvasjs.min.js"
+      } ],
+      "templateHtml" : "<div\n    style=\"width: 100%; height: 100%; display: flex; align-item: center; justify-content: center;\">\n    <div id=\"chartContainer4\"\n        style=\"height: 100%; width: 100%;\">\n    </div>\n\n    <div class=\"do\">\n        <h3>\n            90%\n        </h3>\n        <div class=\"oee\">\n            OEE\n        </div>\n    </div>\n    <div class=\"text\">\n        <p class=\"first\">\n            0\n        </p>\n        <p class=\"Sec\">\n            100\n        </p>\n    </div>\n</div>",
+      "templateCss" : " /*h4 {*/\n /*    position: absolute;*/\n /*    color: black;*/\n /*    margin-left: 49%;*/\n /*    margin-top: 40%;*/\n /*    z-index: 1000;*/\n /*}*/\n\n /*h5 {*/\n /*    position: absolute;*/\n /*    color: black;*/\n /*    margin: 11.5% 0 0 59%;*/\n /*    z-index: 1000;*/\n /*}*/\n\n .back {\n     width: 100%;\n     height: 100%;\n     background: white;\n }\n\n #chartContainer4 {\n     position: relative;\n\n }\n\n .do {\n     margin-top: 10px;\n     position: absolute;\n     width: 100%;\n     height: 100%;\n     display: flex;\n     justify-content: center;\n     align-items: center;\n     flex-direction: column;\n }\n\n .do h3 {\n     color: #000;\n }\n\n .do .oee {\n     color: gray;\n }\n \n .text .first{\n       position: absolute;\n   top: 87%;\n   left: 50%;\n    font-size: 15px;\n  \n }\n .text .Sec{\nposition: absolute;\n   top: 40%;\n   left:80%;\n   font-size: 15px;\n  \n }",
+      "controllerScript" : "self.onInit = function() {\n\n          CanvasJS.addColorSet(\"Shades\",\n        [//colorSet Array\n          \"#ffffff\",\n          \"blue\"\n        ]);\n      var chart = new CanvasJS.Chart(\"chartContainer4\",\n        {\n          colorSet: \"Shades\",\n          title: {\n            text: \"Doughnut\",\n            fontFamily: \"Impact\",\n            fontWeight: \"normal\"\n          },\n\n          //   legend:{\n          //     verticalAlign: \"bottom\",\n          //     horizontalAlign: \"center\"\n          //   },\n          data: [\n            {\n\n              type: \"doughnut\",\n              showInLegend: false,\n              dataPoints: [\n                { y: 25.0, },\n                { y: 75.0, },\n\n              ]\n            }\n          ]\n        });\n\n\n      chart.render();\n\n}\n\nself.actionSources = function() {\n    return {\n        'elementClick': {\n            name: 'widget-action.element-click',\n            multiple: true\n        }\n    };\n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"required\": [\"cardHtml\"],\n        \"properties\": {\n            \"cardCss\": {\n                \"title\": \"CSS\",\n                \"type\": \"string\",\n                \"default\": \".card {\\n font-weight: bold; \\n}\"\n            },\n            \"cardHtml\": {\n                \"title\": \"HTML\",\n                \"type\": \"string\",\n                \"default\": \"<div class='card'>HTML code here</div>\"\n            }\n        }\n    },\n    \"form\": [\n        {\n            \"key\": \"cardCss\",\n            \"type\": \"css\"\n        },           \n        {\n            \"key\": \"cardHtml\",\n            \"type\": \"html\"\n        }    \n    ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"Doughnut3\",\"dropShadow\":true}"
+    },
+    "bundleAlias" : "cards",
+    "createdTime" : 1630914678027,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "37eebdb0-0ee7-11ec-a4b0-6fb4a09a8a57"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  }, {
+    "alias" : "first_box",
+    "name" : "first box",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"firstbox\">\n    <p>PO and Product</p>\n    <h3>10197253</h3>\n    <div class=\"innerText\">\n        <h3>12642358 [ 5150 ]</h3>\n        <h3>3,825 of 2779 pcs</h3>\n    </div>\n    <div class=\"outerText\">\n        <h3>Apr 26, 08:32 Am</h3>\n    </div>\n</div>\n<div class=\"secBox\">\n    <p>No Titltle here</p>\n    <h3>10197565</h3>\n    <div class=\"innerText1\">\n        <h3>12575644231</h3>\n        <h3>1,825 of 2779 pcs</h3>\n    </div>\n    <div class=\"outerText1\">\n        <h3>Apr 26, 08:32 Am</h3>\n    </div>\n</div>\n ",
+      "templateCss" : "\n *{\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n.firstbox{\n    width: 100%;\n    padding: 10px;\n    background: rgb(14, 183, 41);\n}\n.firstbox p,\n.firstbox h3{\n    font-size: 12px;\n    color: #fff;\n    margin-top: 10px;\n}\n.firstbox .innerText{\n    width: 100%;\n  \n    display: flex;\n    justify-content: space-between;\n}\n.firstbox .outerText{\n    width: 100%;\n     display: flex;\n    justify-content: flex-end;\n}\n/*                   Sec Box             */\n.secBox{\n    margin-top: 10px;\n    width: 100%;\n    padding: 10px;\n    background: rgb(252, 145, 3);\n}\n.secBox p,\n.secBox h3{\n    font-size: 12px;\n    color: #fff;\n    margin-top: 10px;\n}\n.secBox .innerText1{\n    width: 100%;\n  \n    display: flex;\n    justify-content: space-between;\n}\n.secBox .outerText1{\n    width: 100%;\n     display: flex;\n    justify-content: flex-end;\n}",
+      "controllerScript" : "self.onInit = function() {\n\n   \n}\n\nself.actionSources = function() {\n    return {\n        'elementClick': {\n            name: 'widget-action.element-click',\n            multiple: true\n        }\n    };\n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"required\": [\"cardHtml\"],\n        \"properties\": {\n            \"cardCss\": {\n                \"title\": \"CSS\",\n                \"type\": \"string\",\n                \"default\": \".card {\\n font-weight: bold; \\n}\"\n            },\n            \"cardHtml\": {\n                \"title\": \"HTML\",\n                \"type\": \"string\",\n                \"default\": \"<div class='card'>HTML code here</div>\"\n            }\n        }\n    },\n    \"form\": [\n        {\n            \"key\": \"cardCss\",\n            \"type\": \"css\"\n        },           \n        {\n            \"key\": \"cardHtml\",\n            \"type\": \"html\"\n        }    \n    ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"first box\",\"dropShadow\":true}"
+    },
+    "bundleAlias" : "cards",
+    "createdTime" : 1630906155724,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "603e80c0-0ed3-11ec-a4b0-6fb4a09a8a57"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  }, {
+    "alias" : "red_box",
+    "name" : "red box",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"firstbox\">\n    <p>PO and Product</p>\n    <h3>10197253</h3>\n    <div class=\"innerText\">\n        <h3>12642358 [ 5150 ]</h3>\n        <h3>3,825 of 2779 pcs</h3>\n    </div>\n    <div class=\"outerText\">\n        <h3>Apr 26, 08:32 Am</h3>\n    </div>\n</div>\n<div class=\"secBox\">\n    <p>No Titltle here</p>\n    <h3>10197565</h3>\n    <div class=\"innerText1\">\n        <h3>12575644231</h3>\n        <h3>1,825 of 2779 pcs</h3>\n    </div>\n    <div class=\"outerText1\">\n        <h3>Apr 26, 08:32 Am</h3>\n    </div>\n</div>\n ",
+      "templateCss" : "\n *{\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n.firstbox{\n    width: 100%;\n    padding: 10px;\n    background: red;\n}\n.firstbox p,\n.firstbox h3{\n    font-size: 12px;\n    color: #fff;\n    margin-top: 10px;\n}\n.firstbox .innerText{\n    width: 100%;\n  \n    display: flex;\n    justify-content: space-between;\n}\n.firstbox .outerText{\n    width: 100%;\n     display: flex;\n    justify-content: flex-end;\n}\n/*                   Sec Box             */\n.secBox{\n    margin-top: 10px;\n    width: 100%;\n    padding: 10px;\n    background: rgb(252, 145, 3);\n}\n.secBox p,\n.secBox h3{\n    font-size: 12px;\n    color: #fff;\n    margin-top: 10px;\n}\n.secBox .innerText1{\n    width: 100%;\n  \n    display: flex;\n    justify-content: space-between;\n}\n.secBox .outerText1{\n    width: 100%;\n     display: flex;\n    justify-content: flex-end;\n}",
+      "controllerScript" : "self.onInit = function() {\n\n}\n\nself.actionSources = function() {\n    return {\n        'elementClick': {\n            name: 'widget-action.element-click',\n            multiple: true\n        }\n    };\n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"required\": [\"cardHtml\"],\n        \"properties\": {\n            \"cardCss\": {\n                \"title\": \"CSS\",\n                \"type\": \"string\",\n                \"default\": \".card {\\n font-weight: bold; \\n}\"\n            },\n            \"cardHtml\": {\n                \"title\": \"HTML\",\n                \"type\": \"string\",\n                \"default\": \"<div class='card'>HTML code here</div>\"\n            }\n        }\n    },\n    \"form\": [\n        {\n            \"key\": \"cardCss\",\n            \"type\": \"css\"\n        },           \n        {\n            \"key\": \"cardHtml\",\n            \"type\": \"html\"\n        }    \n    ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"red box\",\"dropShadow\":true}"
+    },
+    "bundleAlias" : "cards",
+    "createdTime" : 1630908819926,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "943b7760-0ed9-11ec-a4b0-6fb4a09a8a57"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  }, {
+    "alias" : "second_box",
+    "name" : "second box",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div class=\"secBox\">\n    <p>No Titltle here</p>\n    <h3>10197565</h3>\n    <div class=\"innerText1\">\n        <h3>12575644231</h3>\n        <h3>1,825 of 2779 pcs</h3>\n    </div>\n    <div class=\"outerText1\">\n        <h3>Apr 26, 08:32 Am</h3>\n    </div>\n</div>\n ",
+      "templateCss" : "\n *{\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n.firstbox{\n    width: 100%;\n    padding: 10px;\n    background: rgb(14, 183, 41);\n}\n.firstbox p,\n.firstbox h3{\n    font-size: 12px;\n    color: #fff;\n    margin-top: 10px;\n}\n.firstbox .innerText{\n    width: 100%;\n  \n    display: flex;\n    justify-content: space-between;\n}\n.firstbox .outerText{\n    width: 100%;\n     display: flex;\n    justify-content: flex-end;\n}\n/*                   Sec Box             */\n.secBox{\n    margin-top: 10px;\n    width: 100%;\n    padding: 10px;\n    background: rgb(252, 145, 3);\n}\n.secBox p,\n.secBox h3{\n    font-size: 12px;\n    color: #fff;\n    margin-top: 10px;\n}\n.secBox .innerText1{\n    width: 100%;\n  \n    display: flex;\n    justify-content: space-between;\n}\n.secBox .outerText1{\n    width: 100%;\n     display: flex;\n    justify-content: flex-end;\n}",
+      "controllerScript" : "self.onInit = function() {\n\n   \n}\n\nself.actionSources = function() {\n    return {\n        'elementClick': {\n            name: 'widget-action.element-click',\n            multiple: true\n        }\n    };\n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"required\": [\"cardHtml\"],\n        \"properties\": {\n            \"cardCss\": {\n                \"title\": \"CSS\",\n                \"type\": \"string\",\n                \"default\": \".card {\\n font-weight: bold; \\n}\"\n            },\n            \"cardHtml\": {\n                \"title\": \"HTML\",\n                \"type\": \"string\",\n                \"default\": \"<div class='card'>HTML code here</div>\"\n            }\n        }\n    },\n    \"form\": [\n        {\n            \"key\": \"cardCss\",\n            \"type\": \"css\"\n        },           \n        {\n            \"key\": \"cardHtml\",\n            \"type\": \"html\"\n        }    \n    ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"cardHtml\":\"<div class='card'>HTML code here</div>\",\"cardCss\":\".card {\\n    font-weight: bold;\\n    font-size: 32px;\\n    color: #999;\\n    width: 100%;\\n    height: 100%;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n}\"},\"title\":\"second box\",\"dropShadow\":true}"
+    },
+    "bundleAlias" : "cards",
+    "createdTime" : 1630906368252,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "deebb3c0-0ed3-11ec-a4b0-6fb4a09a8a57"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  } ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

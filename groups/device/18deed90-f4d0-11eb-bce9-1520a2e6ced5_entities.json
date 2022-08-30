@@ -1,0 +1,16 @@
+[ {
+  "entityType" : "DEVICE",
+  "id" : "2f84a5b0-0b34-11ec-8da5-cbf2cd94b501"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "383bcc30-f4d0-11eb-ab24-1f8899a6f9b3"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "5f6d77d0-0b33-11ec-a08f-1b3182194747"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "69a75a70-00c7-11ec-b1a6-5589a771cc7b"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "f0a92700-096f-11ec-b1e5-754cd69c8d63"
+} ]

@@ -1,0 +1,83 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Jubaili UAE - Customer"
+    },
+    "createdTime" : 1623245471480,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "f49cf780-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "label" : "Group",
+    "name" : "AlSahel Contracting Company LLC",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Customer"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "f49cf780-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "c3b9a8b0-d7e1-11eb-9d0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "f49cf780-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "d54f3e30-ce83-11eb-8c1b-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "f49cf780-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "01e06460-ce84-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "71312b00-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "f49cf780-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837341756,
+      "longValue" : 45,
+      "strValue" : null
+    } ]
+  }
+}

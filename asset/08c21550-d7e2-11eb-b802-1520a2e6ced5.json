@@ -1,0 +1,67 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1624865137445,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "08c21550-d7e2-11eb-b802-1520a2e6ced5"
+    },
+    "label" : "Site",
+    "name" : "(MMI-002/C) Murtala Muhammed Intl Airport - Drilling",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "909fc770-c927-11eb-8c1b-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "08c21550-d7e2-11eb-b802-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "08c21550-d7e2-11eb-b802-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "fb8b8a70-d74a-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837338798,
+      "longValue" : 100,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coordinates",
+      "lastUpdateTs" : 1624895070964,
+      "longValue" : null,
+      "strValue" : "[[6.572101878963434, 3.316798210144043], [6.571973978954364, 3.3271408081054688], [6.5696291396259765, 3.3270978927612305], [6.569671773166974, 3.331732749938965], [6.5976812187794405, 3.331475257873535], [6.597553325361587, 3.3266258239746094], [6.583484847958418, 3.3264970779418945], [6.58331431851232, 3.3153390884399414], [6.589282814262896, 3.3153820037841797], [6.589240182404971, 3.3119916915893555], [6.5487382655013535, 3.3120775222778316], [6.5487382655013535, 3.31662654876709], [6.572101878963434, 3.316798210144043]]"
+    } ]
+  }
+}

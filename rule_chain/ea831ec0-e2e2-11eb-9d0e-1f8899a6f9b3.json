@@ -1,0 +1,514 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "createdTime" : 1626074978988,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "f5729f10-e2e5-11eb-aca6-1520a2e6ced5"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "ea831ec0-e2e2-11eb-9d0e-1f8899a6f9b3"
+    },
+    "name" : "StatusCalculations",
+    "root" : false,
+    "tenantId" : null,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 18,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 5,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 852,
+        "layoutY" : 277
+      },
+      "configuration" : {
+        "jsScript" : "if (msg.engine_speed > 700) {\n    msg.engine_running_status = \"Engine On\";\n} else {\n    msg.engine_running_status = \"Engine Off\";\n}\n\nif (msg.coolant_temperature > metadata\n    .ss_coolant_temperature_threshold) {\n    msg.engine_coolant_status = \"High\";\n} else {\n    msg.engine_coolant_status = \"Normal\";\n}\n\n\nif (msg.fuel_level > metadata\n    .ss_fuel_low_threshold) {\n    msg.fuel_level_status = \"Normal\";\n} else {\n    msg.fuel_level_status = \"Low\";\n}\n\nif (msg.engine_bat_voltage > metadata\n    .ss_engine_battery_threshold) {\n    msg.engine_battery_status = \"Normal\";\n} else {\n    msg.engine_battery_status = \"Low\";\n}\n\nif (msg.oil_temperature > metadata\n    .ss_oil_temp_threshold) {\n    msg.engine_oil_temperature_status = \"High\";\n} else {\n    msg.engine_oil_temperature_status = \"Normal\";\n}\n\n\nif (msg.oil_pressure > metadata\n    .ss_oil_pressure_threshold) {\n    msg.engine_oil_pressure_status = \"High\";\n} else {\n    msg.engine_oil_pressure_status = \"Normal\";\n}\n\nif (metadata.engine_hour_meter == undefined) {\n    msg.running_hours =  msg.engine_hour_meter;\n}else if (parseFloat(JSON.parse(\n        metadata.engine_hour_meter)) > 0) {\n    msg.running_hours = msg.engine_hour_meter - parseFloat(\n        JSON.parse(\n            metadata.engine_hour_meter));\n}\n\n\nif (msg.running_hours < 0) {\n    msg.running_hours = 0;\n}\n\n\nif (metadata.fuel_level == undefined) {\n    msg.fuel_consumed =  msg.fuel_level;\n}else if (parseFloat(JSON.parse(metadata\n        .fuel_level)) > 0) {\n    msg.fuel_consumed = parseFloat(JSON.parse(metadata\n            .fuel_level)) -\n        msg\n        .fuel_level;\n}\nif (msg.fuel_consumed < 0) {\n    msg.fuel_consumed = 0;\n}\n\n\nvar v = (+(Number(msg.l1_l2_voltage) + Number(msg\n        .l2_l3_voltage) + Number(msg.l3_l1_voltage)) /\n    3) / 1.732;\n\n\nmsg.power_output_KVA = [(v * msg.l1_current) + (v * msg\n        .l2_current) +\n    (v * msg.l3_current)\n] / 1000;\n\nif (msg.power_output_KVA == null) {\n    msg.power_output_KVA = 0;\n}\n\nmsg.power_output_Kw = msg.power_output_KVA * metadata\n    .ss_power_factor;\nif (msg.power_output_Kw == null) {\n    msg.power_output_Kw = 0;\n}\n\nmsg.percent_load = [Number(msg.power_output_KVA) / Number(metadata\n    .ss_generator_rating)\n] * 100;\n\nif (msg.percent_load == null) {\n    msg.percent_load = 0;\n}\n\nif (msg.percent_load == 0) {\n    msg.load_status = \"Idle\";\n} else if (msg.percent_load < metadata\n    .ss_underload_threshold) {\n    msg.load_status = \"Underload\";\n} else if (msg.percent_load > metadata.ss_underload_threshold && msg\n    .percent_load< metadata.ss_overload_threshold) {\n    msg.load_status = \"Normal\";\n} else if (msg.percent_load > metadata\n    .ss_overload_threshold) {\n    msg.load_status = \"Overload\";\n}\n\nif (msg.load_status == \"Idle\") {\n    msg.idle_fuel_used = msg.fuel_consumed;\n    msg.underload_fuel_used = 0;\n    msg.normal_fuel_used = 0;\n    msg.overload_fuel_used = 0;\n} else if (msg.load_status == \"Underload\") {\n    msg.idle_fuel_used = 0;\n    msg.underload_fuel_used = msg.fuel_consumed;\n    msg.normal_fuel_used = 0;\n    msg.overload_fuel_used = 0;\n} else if (msg.load_status == \"Normal\") {\n    msg.idle_fuel_used = 0;\n    msg.underload_fuel_used = 0;\n    msg.normal_fuel_used = msg.fuel_consumed;\n    msg.overload_fuel_used = 0;\n} else if (msg.load_status == \"Overload\") {\n    msg.idle_fuel_used = 0;\n    msg.underload_fuel_used = 0;\n    msg.normal_fuel_used = 0;\n    msg.overload_fuel_used = msg.fuel_consumed;\n}\n\nvar current_date = new Date();\nvar next_maintain_date = Date.parse(metadata\n    .ss_next_maintain_date);\nvar remaining_days = next_maintain_date - current_date;\nvar remaining_hours = metadata.ss_next_maintain_hour - msg\n    .engine_hour_meter;\n\nif (remaining_hours > 0 && remaining_days > 0) {\n    msg.maintain_due = \"No\";\n    msg.remaining_days = Math.floor(remaining_days /\n        86400000); // days to maintainence\n    msg.remaining_hours = Math.floor(\n        remaining_hours); // engine hours to maintainence\n}\n\nif(remaining_hours < 0) {\n    msg.maintain_due = \"Yes\";\n    msg.remaining_hours = 0;\n}\n\nif(remaining_days < 0){\n    msg.maintain_due = \"Yes\";\n    msg.remaining_days = 0;\n}\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eac027c0-e2e2-11eb-9d0e-1f8899a6f9b3"
+      },
+      "name" : "Vector Calculations",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 492,
+        "layoutY" : 277
+      },
+      "configuration" : {
+        "latestTsKeyNames" : [ "engine_hour_meter", "fuel_level" ],
+        "fetchMode" : "LAST",
+        "orderBy" : "ASC",
+        "limit" : 100,
+        "useMetadataIntervalPatterns" : false,
+        "startInterval" : 30,
+        "startIntervalTimeUnit" : "DAYS",
+        "endInterval" : 1,
+        "endIntervalTimeUnit" : "MILLISECONDS",
+        "startIntervalPattern" : "${ts_start}",
+        "endIntervalPattern" : "${ts_end}"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eac509c0-e2e2-11eb-9d0e-1f8899a6f9b3"
+      },
+      "name" : "Add Previous  Telemetry",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 663,
+        "layoutY" : 154
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "coolant_temperature_threshold", "fuel_low_threshold", "engine_battery_threshold", "oil_temp_threshold", "oil_pressure_threshold", "generator_rating", "power_factor", "underload_threshold", "overload_threshold", "next_maintain_hour", "next_maintain_date" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eac77ac0-e2e2-11eb-9d0e-1f8899a6f9b3"
+      },
+      "name" : "Add Device Attributes",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 90,
+        "layoutY" : 384
+      },
+      "configuration" : {
+        "msgCount" : 2,
+        "periodInSeconds" : 60,
+        "jsScript" : "var msg = {\n    coolant_temp_ws: 10,\n    fuel_level_ws: 10,\n    engine_battery_ws: 10,\n    oil_temp_ws: 10,\n    oil_pressure_ws: 10,\n    load_ws: 10,\n    due_for_maintenance_ws: 40,\n};\n\nvar metadata = {};\n\nvar msgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};",
+        "originatorId" : "a4459950-cc40-11eb-8c1b-1520a2e6ced5",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f3472730-f436-11eb-bce9-1520a2e6ced5"
+      },
+      "name" : "save attribute",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 421,
+        "layoutY" : 598
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f3499830-f436-11eb-bce9-1520a2e6ced5"
+      },
+      "name" : "save",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 303,
+        "layoutY" : 152
+      },
+      "configuration" : {
+        "jsScript" : "var end = new Date().getTime();\nvar start = new Date().getTime() - 3600*1000;\n\nmetadata.ts_start = start;\nmetadata.ts_end = end;\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5729f10-e2e5-11eb-aca6-1520a2e6ced5"
+      },
+      "name" : "Add Unix for ts",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1447,
+        "layoutY" : 374
+      },
+      "configuration" : {
+        "jsScript" : "msg = {\n    engine_running_status: msg.engine_running_status\n};\n\nreturn {\n    msg: msg,\n    metadata: {},\n    msgType: \"POST_ATTRIBUTES_REQUEST\"\n};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0100dc70-fa0b-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "Save_Engine_status",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1671,
+        "layoutY" : 470
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0102b130-fa0b-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "Save Engine Status",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 90,
+        "layoutY" : 331
+      },
+      "configuration" : {
+        "msgCount" : 15,
+        "periodInSeconds" : 60,
+        "jsScript" : "var msg = {\n    'generator_frequency': '50',\n    'engine_bat_voltage': '26.9',\n    'l1_n_voltage': '238.2',\n    'l2_n_voltage': '239.3',\n    'l3_n_voltage': '241.3',\n    'l1_current': '216',\n    'l2_current': '144',\n    'l3_current': '136',\n    'l1_l2_voltage': '411.7',\n    'l2_l3_voltage': '416.9',\n    'l3_l1_voltage': '416.3',\n    'l1_watts': '47820',\n    'l2_watts': '32860',\n    'l3_watts': '30470',\n    'oil_pressure': '410',\n    'oil_temperature': '107',\n    'coolant_temperature': '89',\n    'engine_speed': '1499',\n    'fuel_level': '9.5',\n    'engine_hour_meter': '1436.05',\n    'latitude': 24.842822,\n    'longitude': 55.343761\n};\nvar metadata = {};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};",
+        "originatorId" : "fb8b8a70-d74a-11eb-ae0e-1f8899a6f9b3",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "06120630-eaca-11eb-ad73-1520a2e6ced5"
+      },
+      "name" : "data gen",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1052,
+        "layoutY" : 152
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "coolant_temp_ws", "fuel_level_ws", "engine_battery_ws", "oil_temp_ws", "oil_pressure_ws", "load_ws", "due_for_maintenance_ws" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "212b55e0-f68a-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "Add Device Attributes",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1260,
+        "layoutY" : 280
+      },
+      "configuration" : {
+        "jsScript" : "var performance_score = +0;\nvar total_weight = (Number(metadata.ss_coolant_temp_ws) +\n    Number(metadata.ss_fuel_level_ws) +\n    Number(metadata.ss_engine_battery_ws) + Number(metadata\n        .ss_oil_temp_ws) + Number(metadata\n        .ss_oil_pressure_ws) + Number(metadata\n        .ss_load_ws) + Number(metadata\n        .ss_due_for_maintenance_ws))/100;\nvar total_score = Number(total_weight) * 100;\nmetadata.ss_coolant_temp_ws /= total_weight;\nmetadata.ss_fuel_level_ws /= total_weight;\nmetadata.ss_engine_battery_ws /= total_weight;\nmetadata.ss_oil_temp_ws /= total_weight;\nmetadata.ss_oil_pressure_ws /= total_weight;\nmetadata.ss_load_ws /= total_weight;\nmetadata.ss_due_for_maintenance_ws /= total_weight;\n\n\nif (msg.engine_running_status === \"Engine On\") {\n\n    if (msg.engine_coolant_status === \"Normal\") {\n        performance_score += Number(metadata\n            .ss_coolant_temp_ws);\n    } else {}\n\n\n    if (msg.fuel_level_status === \"Normal\") {\n        performance_score += Number(metadata\n            .ss_fuel_level_ws);\n    } else {}\n\n    if (msg.engine_battery_status === \"Normal\") {\n        performance_score += Number(metadata\n            .ss_engine_battery_ws);\n    } else {}\n\n    if (msg.engine_oil_temperature_status === \"Normal\") {\n        performance_score += Number(metadata\n            .ss_oil_temp_ws);\n    } else {}\n\n\n    if (msg.engine_oil_pressure_status === \"Normal\") {\n        performance_score += Number(metadata\n            .ss_oil_pressure_ws);\n    } else {}\n\n    if (msg.load_status === \"Normal\") {\n        performance_score += Number(metadata.ss_load_ws);\n    } else {}\n\n\n    if (msg.maintain_due === \"No\") {\n        performance_score += Number(metadata\n            .ss_due_for_maintenance_ws);\n    } else {}\n\n    msg.performance_score = Number(performance_score\n        .toFixed(0));\n    msg.total_score = total_score;\n    return {\n        msg: msg,\n        metadata: metadata,\n        msgType: msgType\n    };\n\n\n} else if (msg.engine_running_status === \"Engine Off\") {\n    msg.performance_score = \"Nil\";\n    msg.total_score = total_score;\n    return {\n        msg: msg,\n        metadata: metadata,\n        msgType: msgType\n    };\n}"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "212d51b0-f68a-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "Performance Calculations",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 93,
+        "layoutY" : 502
+      },
+      "configuration" : {
+        "msgCount" : 2,
+        "periodInSeconds" : 60,
+        "jsScript" : "var msg = {\n    coolant_temp_ws: 10,\n    fuel_level_ws: 10,\n    engine_battery_ws: 10,\n    oil_temp_ws: 10,\n    oil_pressure_ws: 10,\n    load_ws: 10,\n    due_for_maintenance_ws: 40,\n};\n\nvar metadata = {};\n\nvar msgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};",
+        "originatorId" : "1e86bb30-cce7-11eb-8c1b-1520a2e6ced5",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "457dce70-f688-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "save attribute",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 89,
+        "layoutY" : 440
+      },
+      "configuration" : {
+        "msgCount" : 2,
+        "periodInSeconds" : 60,
+        "jsScript" : "var msg = {\n    coolant_temp_ws: 10,\n    fuel_level_ws: 10,\n    engine_battery_ws: 10,\n    oil_temp_ws: 10,\n    oil_pressure_ws: 10,\n    load_ws: 10,\n    due_for_maintenance_ws: 40,\n};\n\nvar metadata = {};\n\nvar msgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};",
+        "originatorId" : "0f7c5410-cce7-11eb-ae0e-1f8899a6f9b3",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "457fca40-f688-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "save attribute",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 91,
+        "layoutY" : 572
+      },
+      "configuration" : {
+        "msgCount" : 2,
+        "periodInSeconds" : 60,
+        "jsScript" : "var msg = {\n    coolant_temp_ws: 10,\n    fuel_level_ws: 10,\n    engine_battery_ws: 10,\n    oil_temp_ws: 10,\n    oil_pressure_ws: 10,\n    load_ws: 10,\n    due_for_maintenance_ws: 40,\n};\n\nvar metadata = {};\n\nvar msgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};",
+        "originatorId" : "ae6dfbc0-d749-11eb-99cb-1520a2e6ced5",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "458177f0-f688-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "save attribute",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 95,
+        "layoutY" : 634
+      },
+      "configuration" : {
+        "msgCount" : 2,
+        "periodInSeconds" : 60,
+        "jsScript" : "var msg = {\n    coolant_temp_ws: 10,\n    fuel_level_ws: 10,\n    engine_battery_ws: 10,\n    oil_temp_ws: 10,\n    oil_pressure_ws: 10,\n    load_ws: 10,\n    due_for_maintenance_ws: 40,\n};\n\nvar metadata = {};\n\nvar msgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};",
+        "originatorId" : "1c13bf20-d74a-11eb-ae0e-1f8899a6f9b3",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4582d780-f688-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "save attribute",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 100,
+        "layoutY" : 697
+      },
+      "configuration" : {
+        "msgCount" : 3,
+        "periodInSeconds" : 60,
+        "jsScript" : "var msg = {\n    coolant_temp_ws: 10,\n    fuel_level_ws: 10,\n    engine_battery_ws: 10,\n    oil_temp_ws: 10,\n    oil_pressure_ws: 10,\n    load_ws: 10,\n    due_for_maintenance_ws: 40,\n};\n\nvar metadata = {};\n\nvar msgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};",
+        "originatorId" : "3aad9be0-d74a-11eb-ae0e-1f8899a6f9b3",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "45841000-f688-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "save attribute",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 109,
+        "layoutY" : 759
+      },
+      "configuration" : {
+        "msgCount" : 2,
+        "periodInSeconds" : 60,
+        "jsScript" : "var msg = {\n    coolant_temp_ws: 10,\n    fuel_level_ws: 10,\n    engine_battery_ws: 10,\n    oil_temp_ws: 10,\n    oil_pressure_ws: 10,\n    load_ws: 10,\n    due_for_maintenance_ws: 40,\n};\n\nvar metadata = {};\n\nvar msgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: msgType\n};",
+        "originatorId" : "50266f60-d74a-11eb-99cb-1520a2e6ced5",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "45856f90-f688-11eb-ab24-1f8899a6f9b3"
+      },
+      "name" : "save attribute",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1470,
+        "layoutY" : 157
+      },
+      "configuration" : {
+        "defaultTTL" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "741f4d20-e2f7-11eb-9d0e-1f8899a6f9b3"
+      },
+      "name" : "Save Calculations",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1667,
+        "layoutY" : 280,
+        "ruleChainNodeId" : "rule-chain-node-20"
+      },
+      "configuration" : {
+        "ruleChainId" : "2181a7d0-f9ee-11eb-ab24-1f8899a6f9b3"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1c3c63c0-8407-11ec-9609-1328e1c1b62e"
+      },
+      "name" : "Telemetry Propagation",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

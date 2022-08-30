@@ -1,0 +1,71 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Jubaili Lebanon - Customer"
+    },
+    "createdTime" : 1623245650373,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "5f3ddf50-c927-11eb-ae0e-1f8899a6f9b3"
+    },
+    "label" : "Group",
+    "name" : "CET - Consolidated Engineering & Trading",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Customer"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8eca60a0-c926-11eb-8c1b-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "5f3ddf50-c927-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "5f3ddf50-c927-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "26865290-d7e2-11eb-b802-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "5f3ddf50-c927-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "2c5b6520-d7e2-11eb-b802-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837347181,
+      "longValue" : 50,
+      "strValue" : null
+    } ]
+  }
+}

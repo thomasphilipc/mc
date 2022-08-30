@@ -1,0 +1,277 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : true,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "createdTime" : 1623657833425,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "e33724e0-cc3f-11eb-ae0e-1f8899a6f9b3"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "0f7c5410-cce7-11eb-ae0e-1f8899a6f9b3"
+    },
+    "label" : "generator",
+    "name" : "Genx002",
+    "ownerId" : null,
+    "softwareId" : null,
+    "tenantId" : null,
+    "type" : "Generator_sample"
+  },
+  "credentials" : {
+    "credentialsId" : "Genx002",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "d54f3e30-ce83-11eb-8c1b-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "0f7c5410-cce7-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Mode",
+      "lastUpdateTs" : 1629615672090,
+      "longValue" : null,
+      "strValue" : "Auto Mode"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Operational Status",
+      "lastUpdateTs" : 1629624878844,
+      "longValue" : null,
+      "strValue" : "In Operation"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Operational_Status",
+      "lastUpdateTs" : 1630316493082,
+      "longValue" : null,
+      "strValue" : "IN OPERATION"
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1651690051827,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coolant_temp_ws",
+      "lastUpdateTs" : 1660832764920,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coolant_temperature_threshold",
+      "lastUpdateTs" : 1629692640545,
+      "longValue" : 90,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "due_for_maintenance_ws",
+      "lastUpdateTs" : 1660832764920,
+      "longValue" : 40,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "engine_battery_threshold",
+      "lastUpdateTs" : 1629693187025,
+      "longValue" : 22,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "engine_battery_ws",
+      "lastUpdateTs" : 1660832764920,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "engine_running_status",
+      "lastUpdateTs" : 1651689406821,
+      "longValue" : null,
+      "strValue" : "Engine On"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "expected_efficiency_hours",
+      "lastUpdateTs" : 1634213684772,
+      "longValue" : 8,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "fuel_level_ws",
+      "lastUpdateTs" : 1660832764920,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "fuel_low_threshold",
+      "lastUpdateTs" : 1629692644472,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "generator_rating",
+      "lastUpdateTs" : 1626080779355,
+      "longValue" : 400,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1651690051827,
+      "longValue" : 1651690051825,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1651689409033,
+      "longValue" : 1651689406609,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "load_ws",
+      "lastUpdateTs" : 1660832764920,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "next_maintain_date",
+      "lastUpdateTs" : 1629699478872,
+      "longValue" : null,
+      "strValue" : "15-Aug-21"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "next_maintain_hour",
+      "lastUpdateTs" : 1629632985585,
+      "longValue" : null,
+      "strValue" : "2500"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_pressure_threshold",
+      "lastUpdateTs" : 1629693193217,
+      "longValue" : 420,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_pressure_ws",
+      "lastUpdateTs" : 1660832764920,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_temp_threshold",
+      "lastUpdateTs" : 1629693200131,
+      "longValue" : 110,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_temp_ws",
+      "lastUpdateTs" : 1660832764920,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "overload_threshold",
+      "lastUpdateTs" : 1629711447075,
+      "longValue" : null,
+      "strValue" : "90"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.8,
+      "jsonValue" : null,
+      "key" : "power_factor",
+      "lastUpdateTs" : 1626080779355,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "switch_status",
+      "lastUpdateTs" : 1629292117596,
+      "longValue" : null,
+      "strValue" : "On"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "underload_threshold",
+      "lastUpdateTs" : 1629711514104,
+      "longValue" : 30,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

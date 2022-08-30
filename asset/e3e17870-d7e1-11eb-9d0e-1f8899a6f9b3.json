@@ -1,0 +1,67 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1624865075575,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "e3e17870-d7e1-11eb-9d0e-1f8899a6f9b3"
+    },
+    "label" : "Site",
+    "name" : "(DH-025/C) Damac Hills - Villas",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "e3e17870-d7e1-11eb-9d0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "50266f60-d74a-11eb-99cb-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "08700a40-c927-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "e3e17870-d7e1-11eb-9d0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837346321,
+      "longValue" : 50,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coordinates",
+      "lastUpdateTs" : 1624892003312,
+      "longValue" : null,
+      "strValue" : "[[25.024134166676898, 55.24050235748291], [25.002822313637918, 55.25972843170166], [25.022073145389157, 55.280671119689934], [25.03478870586393, 55.25942802429199], [25.024134166676898, 55.24050235748291]]"
+    } ]
+  }
+}

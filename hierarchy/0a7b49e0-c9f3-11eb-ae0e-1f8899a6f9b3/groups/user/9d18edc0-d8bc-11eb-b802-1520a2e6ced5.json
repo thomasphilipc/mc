@@ -1,0 +1,146 @@
+{
+  "entityType" : "ENTITY_GROUP",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "POC Users Group"
+    },
+    "configuration" : {
+      "columns" : [ {
+        "type" : "ENTITY_FIELD",
+        "key" : "created_time",
+        "sortOrder" : "DESC"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "first_name",
+        "sortOrder" : "NONE"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "last_name",
+        "sortOrder" : "NONE"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "email",
+        "sortOrder" : "NONE"
+      } ],
+      "settings" : { },
+      "actions" : { }
+    },
+    "createdTime" : 1624959016604,
+    "edgeGroupAll" : false,
+    "externalId" : null,
+    "groupAll" : false,
+    "id" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "9d18edc0-d8bc-11eb-b802-1520a2e6ced5"
+    },
+    "name" : "POC Users",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "0a7b49e0-c9f3-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "USER"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "groupEntities" : true,
+  "permissions" : [ {
+    "entityGroupId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "36773420-d8c9-11eb-b802-1520a2e6ced5"
+    },
+    "entityGroupType" : "DASHBOARD",
+    "roleId" : {
+      "entityType" : "ROLE",
+      "id" : "c66d5b20-c9f8-11eb-ae0e-1f8899a6f9b3"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    },
+    "userGroupId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "9d18edc0-d8bc-11eb-b802-1520a2e6ced5"
+    },
+    "createdTime" : 1624964502758,
+    "id" : {
+      "entityType" : "GROUP_PERMISSION",
+      "id" : "63199860-d8c9-11eb-9d0e-1f8899a6f9b3"
+    },
+    "name" : "GROUP_[9d18edc0-d8bc-11eb-b802-1520a2e6ced5]_[c66d5b20-c9f8-11eb-ae0e-1f8899a6f9b3]_[36773420-d8c9-11eb-b802-1520a2e6ced5]_[DASHBOARD]",
+    "public" : false
+  }, {
+    "entityGroupId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "3fbaf790-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "entityGroupType" : "ASSET",
+    "roleId" : {
+      "entityType" : "ROLE",
+      "id" : "c66d5b20-c9f8-11eb-ae0e-1f8899a6f9b3"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    },
+    "userGroupId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "9d18edc0-d8bc-11eb-b802-1520a2e6ced5"
+    },
+    "createdTime" : 1625034115949,
+    "id" : {
+      "entityType" : "GROUP_PERMISSION",
+      "id" : "77cb91d0-d96b-11eb-9d0e-1f8899a6f9b3"
+    },
+    "name" : "GROUP_[9d18edc0-d8bc-11eb-b802-1520a2e6ced5]_[c66d5b20-c9f8-11eb-ae0e-1f8899a6f9b3]_[3fbaf790-c926-11eb-ae0e-1f8899a6f9b3]_[ASSET]",
+    "public" : false
+  }, {
+    "entityGroupId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "f3259fe0-cc3e-11eb-8c1b-1520a2e6ced5"
+    },
+    "entityGroupType" : "DEVICE",
+    "roleId" : {
+      "entityType" : "ROLE",
+      "id" : "c66d5b20-c9f8-11eb-ae0e-1f8899a6f9b3"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    },
+    "userGroupId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "9d18edc0-d8bc-11eb-b802-1520a2e6ced5"
+    },
+    "createdTime" : 1624357686584,
+    "id" : {
+      "entityType" : "GROUP_PERMISSION",
+      "id" : "88799b80-d344-11eb-99cb-1520a2e6ced5"
+    },
+    "name" : "GROUP_[9d18edc0-d8bc-11eb-b802-1520a2e6ced5]_[c66d5b20-c9f8-11eb-ae0e-1f8899a6f9b3]_[f3259fe0-cc3e-11eb-8c1b-1520a2e6ced5]_[DEVICE]",
+    "public" : false
+  }, {
+    "entityGroupId" : null,
+    "entityGroupType" : null,
+    "roleId" : {
+      "entityType" : "ROLE",
+      "id" : "8be4c8d0-d8bc-11eb-b802-1520a2e6ced5"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    },
+    "userGroupId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "9d18edc0-d8bc-11eb-b802-1520a2e6ced5"
+    },
+    "createdTime" : 1624959037372,
+    "id" : {
+      "entityType" : "GROUP_PERMISSION",
+      "id" : "a979dfc0-d8bc-11eb-b802-1520a2e6ced5"
+    },
+    "name" : "GENERIC_[9d18edc0-d8bc-11eb-b802-1520a2e6ced5]_[8be4c8d0-d8bc-11eb-b802-1520a2e6ced5]",
+    "public" : false
+  } ]
+}

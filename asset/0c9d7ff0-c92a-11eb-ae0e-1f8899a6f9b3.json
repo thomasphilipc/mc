@@ -1,0 +1,71 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Master Jubaili Organization"
+    },
+    "createdTime" : 1623246800239,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "0c9d7ff0-c92a-11eb-ae0e-1f8899a6f9b3"
+    },
+    "label" : "Tenant",
+    "name" : "Jubaili Bros Organization - MENA",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Jubaili Org"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "0c9d7ff0-c92a-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "8eca60a0-c926-11eb-8c1b-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "0c9d7ff0-c92a-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "5b9cb930-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "0c9d7ff0-c92a-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "71312b00-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 57.33,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837458716,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

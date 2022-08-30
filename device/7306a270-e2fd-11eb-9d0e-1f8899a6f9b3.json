@@ -1,0 +1,161 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : true,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "createdTime" : 1626086374935,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "505b8330-e2fd-11eb-9d0e-1f8899a6f9b3"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "7306a270-e2fd-11eb-9d0e-1f8899a6f9b3"
+    },
+    "label" : "generator",
+    "name" : "genbeta_01",
+    "ownerId" : null,
+    "softwareId" : null,
+    "tenantId" : null,
+    "type" : "gen_beta"
+  },
+  "credentials" : {
+    "credentialsId" : "genbeta_01",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1630213318029,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coolant_temperature_threshold",
+      "lastUpdateTs" : 1626156518070,
+      "longValue" : null,
+      "strValue" : "90"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "engine_battery_threshold",
+      "lastUpdateTs" : 1626095231369,
+      "longValue" : null,
+      "strValue" : "22"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "fuel_low_threshold",
+      "lastUpdateTs" : 1626095360746,
+      "longValue" : null,
+      "strValue" : "10"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "generator_rating",
+      "lastUpdateTs" : 1626089028716,
+      "longValue" : 400,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1630213318029,
+      "longValue" : 1630213318028,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1630212665872,
+      "longValue" : 1630212665038,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "next_maintain_date",
+      "lastUpdateTs" : 1628407385332,
+      "longValue" : null,
+      "strValue" : "20-Aug-2021"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "next_maintain_hour",
+      "lastUpdateTs" : 1628407398349,
+      "longValue" : 2000,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_pressure_threshold",
+      "lastUpdateTs" : 1626095496245,
+      "longValue" : null,
+      "strValue" : "420"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_temp_threshold",
+      "lastUpdateTs" : 1628418855926,
+      "longValue" : null,
+      "strValue" : "100"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "overload_threshold",
+      "lastUpdateTs" : 1628411844138,
+      "longValue" : null,
+      "strValue" : "40"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.8,
+      "jsonValue" : null,
+      "key" : "power_factor",
+      "lastUpdateTs" : 1626088930951,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "underload_threshold",
+      "lastUpdateTs" : 1628418023382,
+      "longValue" : null,
+      "strValue" : "20"
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

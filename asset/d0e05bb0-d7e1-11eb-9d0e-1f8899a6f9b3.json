@@ -1,0 +1,67 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1624865043691,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "d0e05bb0-d7e1-11eb-9d0e-1f8899a6f9b3"
+    },
+    "label" : "Site",
+    "name" : "(JAP-0115/F) JA Port - Expansion",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "d0e05bb0-d7e1-11eb-9d0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "3aad9be0-d74a-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "08700a40-c927-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "d0e05bb0-d7e1-11eb-9d0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837338767,
+      "longValue" : 40,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coordinates",
+      "lastUpdateTs" : 1624890966354,
+      "longValue" : null,
+      "strValue" : "[[25.03603297127329, 55.035195350646966], [25.0278672491926, 55.04098892211914], [25.032377905720175, 55.0649356842041], [25.050457751876504, 55.05815505981445], [25.03603297127329, 55.035195350646966]]"
+    } ]
+  }
+}

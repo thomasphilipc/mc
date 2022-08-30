@@ -1,0 +1,39 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1623252193966,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "9b86ece0-c936-11eb-8c1b-1520a2e6ced5"
+    },
+    "label" : null,
+    "name" : "qatar",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Geographical Location"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "87c03630-c936-11eb-8c1b-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "9b86ece0-c936-11eb-8c1b-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

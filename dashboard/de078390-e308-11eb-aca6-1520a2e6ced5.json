@@ -1,0 +1,1908 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "Gen Beta Testing",
+      "widgets" : {
+        "93e94519-3a8a-4b1f-1174-95bb21155723" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "entities_table",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSearch" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "displayEntityName" : true,
+              "displayEntityType" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true
+            },
+            "title" : "New Entities table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "b08f0f88-4df5-4106-484a-d78ec12f063e",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#2196f3",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.5989705529334229
+              } ]
+            } ],
+            "actions" : {
+              "actionCellButton" : [ {
+                "name" : "Go to Device",
+                "icon" : "play_arrow",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "Device Level",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openInSeparateDialog" : false,
+                "dialogTitle" : "",
+                "dialogHideDashboardToolbar" : true,
+                "dialogWidth" : null,
+                "dialogHeight" : null,
+                "openRightLayout" : false,
+                "id" : "9e7a1a8a-91b5-2cb6-52c5-0960acc71e3a"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "93e94519-3a8a-4b1f-1174-95bb21155723"
+        },
+        "16eeea1f-0f38-c4f6-3497-785d2e924321" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "entities_table",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSearch" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "displayEntityName" : true,
+              "displayEntityType" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true
+            },
+            "title" : "New Entities table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#2196f3",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.974835444523265
+              } ]
+            } ]
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "16eeea1f-0f38-c4f6-3497-785d2e924321"
+        },
+        "0ab093da-8503-fc5c-fc9c-6a0ea1189d13" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "coolant_temperature_threshold",
+                "type" : "attribute",
+                "label" : "coolant_temperature_threshold",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.28488697069407887
+              }, {
+                "name" : "engine_battery_threshold",
+                "type" : "attribute",
+                "label" : "engine_battery_threshold",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.7805114417567989
+              }, {
+                "name" : "fuel_low_threshold",
+                "type" : "attribute",
+                "label" : "fuel_low_threshold",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.6205353940077672
+              }, {
+                "name" : "generator_rating",
+                "type" : "attribute",
+                "label" : "generator_rating",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.3855580730512679
+              }, {
+                "name" : "oil_pressure_threshold",
+                "type" : "attribute",
+                "label" : "oil_pressure_threshold",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.3231081102933706
+              }, {
+                "name" : "oil_temp_threshold",
+                "type" : "attribute",
+                "label" : "oil_temp_threshold",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.40681168873769646
+              }, {
+                "name" : "overload_threshold",
+                "type" : "attribute",
+                "label" : "overload_threshold",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.29239194939968494
+              }, {
+                "name" : "power_factor",
+                "type" : "attribute",
+                "label" : "power_factor",
+                "color" : "#3f51b5",
+                "settings" : { },
+                "_hash" : 0.2978138061689276
+              }, {
+                "name" : "underload_threshold",
+                "type" : "attribute",
+                "label" : "underload_threshold",
+                "color" : "#e91e63",
+                "settings" : { },
+                "_hash" : 0.21971385916454944
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "New Attributes card"
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "0ab093da-8503-fc5c-fc9c-6a0ea1189d13"
+        },
+        "0958d136-0828-581e-bfe3-c021c274d295" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "coolant_temperature",
+                "type" : "timeseries",
+                "label" : "coolant_temperature",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.3096301462192317
+              }, {
+                "name" : "engine_coolant_status",
+                "type" : "timeseries",
+                "label" : "engine_coolant_status",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.9384816052876724
+              }, {
+                "name" : "coolant_temperature_threshold",
+                "type" : "attribute",
+                "label" : "coolant_temperature_threshold",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.9928500712465682
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "COOLANT TEMPERATURE",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "0958d136-0828-581e-bfe3-c021c274d295"
+        },
+        "0b6ead29-762c-e375-1ef4-09a5ede1b6af" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "engine_bat_voltage",
+                "type" : "timeseries",
+                "label" : "engine_bat_voltage",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8880642729881455
+              }, {
+                "name" : "engine_battery_status",
+                "type" : "timeseries",
+                "label" : "engine_battery_status",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.2833000432048264
+              }, {
+                "name" : "engine_battery_threshold",
+                "type" : "attribute",
+                "label" : "engine_battery_threshold",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.33632683439703315
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "ENGINE BATTERY VOLTAGE",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "0b6ead29-762c-e375-1ef4-09a5ede1b6af"
+        },
+        "720de135-eade-50df-f2cb-4c0ec9f48099" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "fuel_level",
+                "type" : "timeseries",
+                "label" : "fuel_level",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.1606145650396701
+              }, {
+                "name" : "fuel_level_status",
+                "type" : "timeseries",
+                "label" : "fuel_level_status",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.6127331213169228
+              }, {
+                "name" : "fuel_low_threshold",
+                "type" : "attribute",
+                "label" : "fuel_low_threshold",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.16425641066104635
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "FUEL LEVEL",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "720de135-eade-50df-f2cb-4c0ec9f48099"
+        },
+        "b4a92b1b-2654-cf8f-695f-1910498f863b" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "oil_pressure",
+                "type" : "timeseries",
+                "label" : "oil_pressure",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5316703510152331
+              }, {
+                "name" : "oil_pressure_threshold",
+                "type" : "attribute",
+                "label" : "oil_pressure_threshold",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.3132376703364864
+              }, {
+                "name" : "engine_oil_pressure_status",
+                "type" : "timeseries",
+                "label" : "engine_oil_pressure_status",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.5815962156459331
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "OIL PRESSURE",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "b4a92b1b-2654-cf8f-695f-1910498f863b"
+        },
+        "bfab4005-53d4-c220-eac3-ec71420e754b" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "engine_oil_temperature_status",
+                "type" : "timeseries",
+                "label" : "engine_oil_temperature_status",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.4521051513930805
+              }, {
+                "name" : "oil_temperature",
+                "type" : "timeseries",
+                "label" : "oil_temperature",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.20899359354836844
+              }, {
+                "name" : "oil_temp_threshold",
+                "type" : "attribute",
+                "label" : "oil_temp_threshold",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.7700317352076955
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "OIL TEMPERATURE",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "bfab4005-53d4-c220-eac3-ec71420e754b"
+        },
+        "40d7597d-aa80-db64-4a39-56632908f96e" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "load_status",
+                "type" : "timeseries",
+                "label" : "load_status",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.9388231956453867
+              }, {
+                "name" : "percent_load",
+                "type" : "timeseries",
+                "label" : "percent_load",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.22920266561949365
+              }, {
+                "name" : "power_output_KVA",
+                "type" : "timeseries",
+                "label" : "power_output_KVA",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.5537674363076945
+              }, {
+                "name" : "power_output_Kw",
+                "type" : "timeseries",
+                "label" : "power_output_Kw",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.6319046709595125
+              }, {
+                "name" : "generator_rating",
+                "type" : "attribute",
+                "label" : "generator_rating",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.9932654431861505
+              }, {
+                "name" : "overload_threshold",
+                "type" : "attribute",
+                "label" : "overload_threshold",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.1469188747568534
+              }, {
+                "name" : "underload_threshold",
+                "type" : "attribute",
+                "label" : "underload_threshold",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.591052336001607
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "LOAD STATUS",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "40d7597d-aa80-db64-4a39-56632908f96e"
+        },
+        "df8f02e0-2ad9-036b-5efd-e12bab764e84" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "normal_fuel_used",
+                "type" : "timeseries",
+                "label" : "normal_fuel_used",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.33158960307587926
+              }, {
+                "name" : "overload_fuel_used",
+                "type" : "timeseries",
+                "label" : "overload_fuel_used",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.9298857895590862
+              }, {
+                "name" : "underload_fuel_used",
+                "type" : "timeseries",
+                "label" : "underload_fuel_used",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.33713710974763267
+              }, {
+                "name" : "idle_fuel_used",
+                "type" : "timeseries",
+                "label" : "idle_fuel_used",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.007216202671968763
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "LOAD BASED FUEL CONSUMPTION",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "df8f02e0-2ad9-036b-5efd-e12bab764e84"
+        },
+        "c7baf596-3fd4-47e5-226d-e72292e4d6a0" : {
+          "isSystemType" : true,
+          "bundleAlias" : "input_widgets",
+          "typeAlias" : "update_multiple_attributes",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#2196f3",
+                "settings" : {
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "string",
+                  "step" : "1",
+                  "required" : false,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "dataKeyHidden" : false,
+                  "icon" : ""
+                },
+                "_hash" : 0.18022233542178967
+              }, {
+                "name" : "coolant_temperature_threshold",
+                "type" : "attribute",
+                "label" : "coolant_temperature_threshold",
+                "color" : "#f44336",
+                "settings" : {
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "string",
+                  "step" : "1",
+                  "required" : false,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "dataKeyHidden" : false,
+                  "icon" : ""
+                },
+                "_hash" : 0.9740330884774582
+              }, {
+                "name" : "engine_battery_threshold",
+                "type" : "attribute",
+                "label" : "engine_battery_threshold",
+                "color" : "#ffc107",
+                "settings" : {
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "string",
+                  "step" : "1",
+                  "required" : false,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "dataKeyHidden" : false,
+                  "icon" : ""
+                },
+                "_hash" : 0.9293065896636903
+              }, {
+                "name" : "fuel_low_threshold",
+                "type" : "attribute",
+                "label" : "fuel_low_threshold",
+                "color" : "#607d8b",
+                "settings" : {
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "string",
+                  "step" : "1",
+                  "required" : false,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "dataKeyHidden" : false,
+                  "icon" : ""
+                },
+                "_hash" : 0.6089445321325604
+              }, {
+                "name" : "generator_rating",
+                "type" : "attribute",
+                "label" : "generator_rating",
+                "color" : "#9c27b0",
+                "settings" : {
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "string",
+                  "step" : "1",
+                  "required" : false,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "dataKeyHidden" : false,
+                  "icon" : ""
+                },
+                "_hash" : 0.12057136191403228
+              }, {
+                "name" : "oil_pressure_threshold",
+                "type" : "attribute",
+                "label" : "oil_pressure_threshold",
+                "color" : "#8bc34a",
+                "settings" : {
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "string",
+                  "step" : "1",
+                  "required" : false,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "dataKeyHidden" : false,
+                  "icon" : ""
+                },
+                "_hash" : 0.7265604459436903
+              }, {
+                "name" : "oil_temp_threshold",
+                "type" : "attribute",
+                "label" : "oil_temp_threshold",
+                "color" : "#3f51b5",
+                "settings" : {
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "string",
+                  "step" : "1",
+                  "required" : false,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "dataKeyHidden" : false,
+                  "icon" : ""
+                },
+                "_hash" : 0.053882400664866825
+              }, {
+                "name" : "overload_threshold",
+                "type" : "attribute",
+                "label" : "overload_threshold",
+                "color" : "#e91e63",
+                "settings" : {
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "string",
+                  "step" : "1",
+                  "required" : false,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "dataKeyHidden" : false,
+                  "icon" : ""
+                },
+                "_hash" : 0.7636936680985987
+              }, {
+                "name" : "underload_threshold",
+                "type" : "attribute",
+                "label" : "underload_threshold",
+                "color" : "#e91e63",
+                "settings" : {
+                  "dataKeyType" : "server",
+                  "dataKeyValueType" : "string",
+                  "step" : "1",
+                  "required" : false,
+                  "requiredErrorMessage" : "",
+                  "minValueErrorMessage" : "",
+                  "maxValueErrorMessage" : "",
+                  "invalidDateErrorMessage" : "",
+                  "isEditable" : "editable",
+                  "disabledOnDataKey" : "",
+                  "dataKeyHidden" : false,
+                  "icon" : ""
+                },
+                "_hash" : 0.5561163091543132
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "showActionButtons" : true,
+              "showResultMessage" : true,
+              "fieldsAlignment" : "row",
+              "fieldsInRow" : 2,
+              "groupTitle" : "${entityName}"
+            },
+            "title" : "UPDATE THRESHOLDS",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c7baf596-3fd4-47e5-226d-e72292e4d6a0"
+        },
+        "14c5af41-82eb-aa1e-7aa1-1d697241cbd0" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "simple_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "lastActivityTime",
+                "type" : "attribute",
+                "label" : "Last Reported TIme",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.22849022910397332,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "\nconst dateObject = new Date(value)\n\nconst humanDateFormat = dateObject.toLocaleString() \n\nreturn humanDateFormat"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#ffffff",
+            "color" : "rgba(0,0,0,0.87)",
+            "padding" : "16px",
+            "settings" : {
+              "labelPosition" : "top"
+            },
+            "title" : "New Simple card",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "units" : "°C",
+            "decimals" : 0,
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : { },
+            "actions" : { },
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableDataExport" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "14c5af41-82eb-aa1e-7aa1-1d697241cbd0"
+        },
+        "4d153873-7bd3-33d3-d010-879d3d2ec0d1" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "engine_speed",
+                "type" : "timeseries",
+                "label" : "engine_speed",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.7002204262306927
+              }, {
+                "name" : "engine_running_status",
+                "type" : "timeseries",
+                "label" : "engine_running_status",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.5649998802982863
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "ENGINE RUNNING STATUS",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "4d153873-7bd3-33d3-d010-879d3d2ec0d1"
+        },
+        "414c94ea-fa4a-a51b-182c-47d3b3f362b8" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "fuel_consumed",
+                "type" : "timeseries",
+                "label" : "fuel_consumed",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.6313956650996401
+              }, {
+                "name" : "fuel_level",
+                "type" : "timeseries",
+                "label" : "fuel_level",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.8366664840378905
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "FUEL CONSUMED",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "414c94ea-fa4a-a51b-182c-47d3b3f362b8"
+        },
+        "4651977b-b0f8-74cd-9930-df924de9418a" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "attributes_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "engine_hour_meter",
+                "type" : "timeseries",
+                "label" : "engine_hour_meter",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5075248788945786
+              }, {
+                "name" : "running_hours",
+                "type" : "timeseries",
+                "label" : "running_hours",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.9500724983146497
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "RUNNING HOURS",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "4651977b-b0f8-74cd-9930-df924de9418a"
+        },
+        "2007bd98-a927-7c2e-db79-6f530a4e35ec" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "timeseries_bars_flot",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "fuel_consumed",
+                "type" : "timeseries",
+                "label" : "fuel_consumed",
+                "color" : "#2196f3",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : false,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "tooltipValueFormatter" : "",
+                  "showSeparateAxis" : false,
+                  "axisTitle" : "",
+                  "axisPosition" : "left",
+                  "axisTicksFormatter" : "",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  }
+                },
+                "_hash" : 0.5539238752191801
+              } ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 1,
+              "history" : {
+                "historyType" : 0,
+                "timewindowMs" : 3600000,
+                "interval" : 10000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1628323880859,
+                  "endTimeMs" : 1628410280859
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "SUM",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "grid" : {
+                "color" : "#545454",
+                "tickColor" : "#DDDDDD",
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1
+              },
+              "stack" : true,
+              "tooltipIndividual" : false,
+              "defaultBarWidth" : 600,
+              "barAlignment" : "left",
+              "timeForComparison" : "previousInterval",
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "showLabels" : true
+              }
+            },
+            "title" : "New Timeseries Bar Chart",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "widgetStyle" : { },
+            "useDashboardTimewindow" : false,
+            "showLegend" : true,
+            "actions" : { },
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "2007bd98-a927-7c2e-db79-6f530a4e35ec"
+        },
+        "0ca68e1a-e14c-9443-4a2a-cd64d11432e7" : {
+          "isSystemType" : false,
+          "bundleAlias" : "gauge_arc",
+          "typeAlias" : "radial_gauge_canvas_gauges2",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 6,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "coolant_temperature",
+                "type" : "timeseries",
+                "label" : "coolant_temperature",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.6602187720545543
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "maxValue" : 100,
+              "startAngle" : 45,
+              "ticksAngle" : 270,
+              "showBorder" : true,
+              "defaultColor" : "#e65100",
+              "needleCircleSize" : 10,
+              "highlights" : [ ],
+              "showUnitTitle" : true,
+              "colorPlate" : "#fff",
+              "colorMajorTicks" : "#444",
+              "colorMinorTicks" : "#666",
+              "minorTicks" : 10,
+              "valueInt" : 3,
+              "valueDec" : 0,
+              "highlightsWidth" : 15,
+              "valueBox" : true,
+              "animation" : true,
+              "animationDuration" : 500,
+              "animationRule" : "cycle",
+              "colorNeedleShadowUp" : "rgba(2, 255, 255, 0)",
+              "numbersFont" : {
+                "family" : "Roboto",
+                "size" : 18,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#616161"
+              },
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 24,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#888"
+              },
+              "unitsFont" : {
+                "family" : "Roboto",
+                "size" : 22,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#616161"
+              },
+              "valueFont" : {
+                "family" : "Segment7Standard",
+                "size" : 36,
+                "style" : "normal",
+                "weight" : "normal",
+                "shadowColor" : "rgba(0, 0, 0, 0.49)",
+                "color" : "#444"
+              },
+              "minValue" : -100,
+              "colorNeedleShadowDown" : "rgba(188,143,143,0.45)",
+              "colorValueBoxRect" : "#888",
+              "colorValueBoxRectEnd" : "#666",
+              "colorValueBoxBackground" : "#babab2",
+              "colorValueBoxShadow" : "rgba(0,0,0,1)"
+            },
+            "title" : "New Commands Widget",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "0ca68e1a-e14c-9443-4a2a-cd64d11432e7"
+        },
+        "dd643715-16cc-b1ce-d52a-f47440db02bf" : {
+          "isSystemType" : false,
+          "bundleAlias" : "gauge_arc",
+          "typeAlias" : "status_update",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7,
+          "sizeY" : 5.5,
+          "config" : {
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "New Status Update",
+            "dropShadow" : true,
+            "targetDeviceAliases" : [ ],
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "08ec6e93-c878-0ac5-b85d-48cbd35d9e82" ]
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "dd643715-16cc-b1ce-d52a-f47440db02bf"
+        },
+        "73e6583f-4f58-cd05-cb18-6c268f0736cf" : {
+          "isSystemType" : false,
+          "bundleAlias" : "gauge_arc",
+          "typeAlias" : "pie_aggregation",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 10,
+          "sizeY" : 10.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "normal_fuel_used",
+                "type" : "timeseries",
+                "label" : "normal_fuel_used",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.4585067733079502
+              }, {
+                "name" : "idle_fuel_used",
+                "type" : "timeseries",
+                "label" : "idle_fuel_used",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.4139559319771262
+              }, {
+                "name" : "overload_fuel_used",
+                "type" : "timeseries",
+                "label" : "overload_fuel_used",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.7275014699629319
+              }, {
+                "name" : "underload_fuel_used",
+                "type" : "timeseries",
+                "label" : "underload_fuel_used",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.4497810159232203
+              } ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 8000
+              },
+              "aggregation" : {
+                "type" : "SUM",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "New Pie Aggregation",
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "row",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : false,
+              "showTotal" : true
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "73e6583f-4f58-cd05-cb18-6c268f0736cf"
+        },
+        "bbe356d4-bea7-dfa3-878a-d4171c431fa5" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div id='test1' class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : true,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "test1",
+                "icon" : "more_horiz",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "default",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openInSeparateDialog" : false,
+                "dialogTitle" : "",
+                "dialogHideDashboardToolbar" : true,
+                "dialogWidth" : null,
+                "dialogHeight" : null,
+                "openRightLayout" : false,
+                "id" : "80402503-a223-f838-8978-98f6ecb79cff"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "bbe356d4-bea7-dfa3-878a-d4171c431fa5"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Gen_Beta",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "93e94519-3a8a-4b1f-1174-95bb21155723" : {
+                  "sizeX" : 16,
+                  "sizeY" : 5,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "color" : "rgba(0,0,0,0.870588)",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        },
+        "Device Level" : {
+          "name" : "${entityName}",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "16eeea1f-0f38-c4f6-3497-785d2e924321" : {
+                  "sizeX" : 12,
+                  "sizeY" : 4,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "0ab093da-8503-fc5c-fc9c-6a0ea1189d13" : {
+                  "sizeX" : 5,
+                  "sizeY" : 5,
+                  "row" : 0,
+                  "col" : 19
+                },
+                "0958d136-0828-581e-bfe3-c021c274d295" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 5,
+                  "col" : 0
+                },
+                "0b6ead29-762c-e375-1ef4-09a5ede1b6af" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 5,
+                  "col" : 7
+                },
+                "720de135-eade-50df-f2cb-4c0ec9f48099" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 5,
+                  "col" : 14
+                },
+                "b4a92b1b-2654-cf8f-695f-1910498f863b" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 8,
+                  "col" : 0
+                },
+                "bfab4005-53d4-c220-eac3-ec71420e754b" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 8,
+                  "col" : 7
+                },
+                "40d7597d-aa80-db64-4a39-56632908f96e" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 8,
+                  "col" : 14
+                },
+                "df8f02e0-2ad9-036b-5efd-e12bab764e84" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 11,
+                  "col" : 0
+                },
+                "c7baf596-3fd4-47e5-226d-e72292e4d6a0" : {
+                  "sizeX" : 3,
+                  "sizeY" : 9,
+                  "row" : 5,
+                  "col" : 21
+                },
+                "14c5af41-82eb-aa1e-7aa1-1d697241cbd0" : {
+                  "sizeX" : 7,
+                  "sizeY" : 2,
+                  "row" : 1,
+                  "col" : 12
+                },
+                "4d153873-7bd3-33d3-d010-879d3d2ec0d1" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 14,
+                  "col" : 0
+                },
+                "414c94ea-fa4a-a51b-182c-47d3b3f362b8" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 11,
+                  "col" : 7
+                },
+                "4651977b-b0f8-74cd-9930-df924de9418a" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 11,
+                  "col" : 14
+                },
+                "2007bd98-a927-7c2e-db79-6f530a4e35ec" : {
+                  "sizeX" : 14,
+                  "sizeY" : 5,
+                  "row" : 17,
+                  "col" : 0
+                },
+                "0ca68e1a-e14c-9443-4a2a-cd64d11432e7" : {
+                  "sizeX" : 4,
+                  "sizeY" : 3,
+                  "row" : 15,
+                  "col" : 14
+                },
+                "dd643715-16cc-b1ce-d52a-f47440db02bf" : {
+                  "sizeX" : 6,
+                  "sizeY" : 10,
+                  "row" : 18,
+                  "col" : 14
+                },
+                "73e6583f-4f58-cd05-cb18-6c268f0736cf" : {
+                  "sizeX" : 10,
+                  "sizeY" : 10,
+                  "row" : 22,
+                  "col" : 0
+                },
+                "bbe356d4-bea7-dfa3-878a-d4171c431fa5" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 32,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "color" : "rgba(0,0,0,0.870588)",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "b08f0f88-4df5-4106-484a-d78ec12f063e" : {
+          "id" : "b08f0f88-4df5-4106-484a-d78ec12f063e",
+          "alias" : "All_Gen_Betas",
+          "filter" : {
+            "type" : "deviceType",
+            "resolveMultiple" : true,
+            "deviceType" : "gen_beta",
+            "deviceNameFilter" : ""
+          }
+        },
+        "08ec6e93-c878-0ac5-b85d-48cbd35d9e82" : {
+          "id" : "08ec6e93-c878-0ac5-b85d-48cbd35d9e82",
+          "alias" : "a_Gen_Beta",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1626004900760,
+            "endTimeMs" : 1626091300760
+          },
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "createdTime" : 1626091278921,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "de078390-e308-11eb-aca6-1520a2e6ced5"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Gen_Beta",
+    "ownerId" : null,
+    "tenantId" : null,
+    "title" : "Gen_Beta"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

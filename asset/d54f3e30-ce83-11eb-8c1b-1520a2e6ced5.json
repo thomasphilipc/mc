@@ -1,0 +1,95 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Customer Site"
+    },
+    "createdTime" : 1623835117971,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "d54f3e30-ce83-11eb-8c1b-1520a2e6ced5"
+    },
+    "label" : "Site",
+    "name" : "(JA-125/2) Jebel Ali Beach - JAB Towers",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "d54f3e30-ce83-11eb-8c1b-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "0f7c5410-cce7-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "d54f3e30-ce83-11eb-8c1b-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "1e86bb30-cce7-11eb-8c1b-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "f49cf780-c926-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "d54f3e30-ce83-11eb-8c1b-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837341757,
+      "longValue" : 40,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coordinates",
+      "lastUpdateTs" : 1624897810511,
+      "longValue" : null,
+      "strValue" : "[[24.93112048033821, 54.92434501647949], [24.922169409556517, 54.96065139770508], [24.937191271461575, 54.97901916503906], [24.96014860986716, 54.95859146118164], [24.93112048033821, 54.92434501647949]]"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "performance_score",
+      "lastUpdateTs" : 1628618733167,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{}",
+      "key" : "score_list",
+      "lastUpdateTs" : 1628618816986,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

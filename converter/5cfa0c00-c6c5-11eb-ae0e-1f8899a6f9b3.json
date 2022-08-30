@@ -1,0 +1,27 @@
+{
+  "entityType" : "CONVERTER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : {
+      "decoder" : "// Decode an uplink message from a buffer\r\n// payload - array of bytes\r\n// metadata - key/value object\r\n/** Decoder **/\r\n// decode payload to string\r\n// var payloadStr = decodeToString(payload);\r\n// decode payload to JSON\r\n\r\nvar result=[];\r\nvar datas = decodeToJson(payload);\r\n\r\nfor (var i = 0; i < datas.length; i++) {\r\n    var data = datas[i]\r\n\r\n\r\nvar current_result = {\r\n   deviceName: data.ident,\r\n   deviceType: data[\"protocol.id\"],\r\n   attributes: {\r\n       model: \"concox-gt08\",\r\n       serialNumber: data.ident,\r\n       bleMacAddress : data[\"ble.mac.address\"]\r\n\r\n       \r\n       \r\n   },\r\n   telemetry: {\r\n       latitude: data[\"position.latitude\"],\r\n       longitude: data[\"position.longitude\"],\r\n       speed : data[\"position.speed\"],\r\n       altitude : data[\"position.altitude\"],\r\n       direction : data[\"position.direction\"],\r\n       satellites: data[\"position.satellites\"],\r\n       timestamp : Math.trunc(data.timestamp),\r\n       ignitionStatus : data[\"engine.ignition.status\"],\r\n       gsmLac : data[\"gsm.lac\"],\r\n       gsmMcc : data[\"gsm.mcc\"],\r\n       gsmMNC : data[\"gsm.mnc\"],\r\n       postionValid : data[\"position.valid\"],\r\n       gsmSignalLevel : data[\"gsm.signal.level\"],\r\n       towingAlarmStatus : data[\"towing.alarm.status\"],\r\n       batteryCurrent : data[\"battery.current\"],\r\n       vehicleMileage : data[\"vehicle.mileage\"],\r\n       externalVoltage : data[\"external.powersource.voltage\"],\r\n       externalPowerStatus : data[\"external.powersource.status\"],\r\n       eventNum : data[\"event.enum\"],\r\n       movementStatus : data[\"movement.status\"],\r\n       batteryVoltage : data[\"battery.voltage\"],\r\n       batteryLowAlarm : data[\"battery.low.alarm\"],\r\n       powerCutAlarm : data[\"power.cut.alarm\"],\r\n       batteryLevel : data[\"battery.level\"]\r\n   }\r\n};\r\n\r\n\r\nresult.push(current_result)\r\n}\r\n\r\n\r\n\r\n\r\nreturn result;\r\n\r\n\r\n\r\n\r\n// Result object with device attributes/telemetry data\r\n\r\n\r\n  \r\n/** Helper functions **/\r\nfunction decodeToString(payload) {\r\n   var value = String.fromCharCode.apply(String, payload);\r\n    return  value\r\n\r\n}\r\nfunction decodeToJson(payload) {\r\n   // covert payload to string.\r\n   var str = decodeToString(payload);\r\n   // parse string to JSON\r\n\r\n   var data = JSON.parse(str);\r\n   return data;\r\n}",
+      "encoder" : null
+    },
+    "createdTime" : 1622983653568,
+    "debugMode" : true,
+    "edgeTemplate" : false,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CONVERTER",
+      "id" : "5cfa0c00-c6c5-11eb-ae0e-1f8899a6f9b3"
+    },
+    "name" : "flespi",
+    "tenantId" : null,
+    "type" : "UPLINK"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

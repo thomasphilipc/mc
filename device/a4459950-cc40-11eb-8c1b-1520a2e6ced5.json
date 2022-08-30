@@ -1,0 +1,341 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : true,
+      "overwriteActivityTime" : true,
+      "description" : "generator"
+    },
+    "createdTime" : 1623586357093,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "e33724e0-cc3f-11eb-ae0e-1f8899a6f9b3"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "a4459950-cc40-11eb-8c1b-1520a2e6ced5"
+    },
+    "label" : "generator",
+    "name" : "Genx001",
+    "ownerId" : null,
+    "softwareId" : null,
+    "tenantId" : null,
+    "type" : "Generator_sample"
+  },
+  "credentials" : {
+    "credentialsId" : "Genx001",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "01e06460-ce84-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "a4459950-cc40-11eb-8c1b-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Mode",
+      "lastUpdateTs" : 1629615685911,
+      "longValue" : null,
+      "strValue" : "Auto Mode"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Operational_Status",
+      "lastUpdateTs" : 1630222148437,
+      "longValue" : null,
+      "strValue" : "IN OPERATION"
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1651834462663,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coolant_temp_ws",
+      "lastUpdateTs" : 1660832965533,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coolant_temperature_threshold",
+      "lastUpdateTs" : 1629692652044,
+      "longValue" : null,
+      "strValue" : "90"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "customerName",
+      "lastUpdateTs" : 1629878582261,
+      "longValue" : null,
+      "strValue" : "dev@vectorglobe.com"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "deviceName",
+      "lastUpdateTs" : 1629878582261,
+      "longValue" : null,
+      "strValue" : "Genx001"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "due_for_maintenance_ws",
+      "lastUpdateTs" : 1660832965533,
+      "longValue" : 40,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "engine_battery_threshold",
+      "lastUpdateTs" : 1629693209308,
+      "longValue" : 22,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "engine_battery_ws",
+      "lastUpdateTs" : 1660832965533,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "engine_running_status",
+      "lastUpdateTs" : 1651689390787,
+      "longValue" : null,
+      "strValue" : "Engine On"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "expected_efficiency_hours",
+      "lastUpdateTs" : 1634213665483,
+      "longValue" : 8,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "fuel_level_ws",
+      "lastUpdateTs" : 1660832965533,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "fuel_low_threshold",
+      "lastUpdateTs" : 1629692656164,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "generator_rating",
+      "lastUpdateTs" : 1626081090280,
+      "longValue" : 400,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1651834462663,
+      "longValue" : 1651834462663,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1651689391031,
+      "longValue" : 1651689390714,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "load_ws",
+      "lastUpdateTs" : 1660832965533,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "next_maintain_date",
+      "lastUpdateTs" : 1629632929577,
+      "longValue" : null,
+      "strValue" : "15-Oct-21"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "next_maintain_hour",
+      "lastUpdateTs" : 1629711655228,
+      "longValue" : null,
+      "strValue" : "2500"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_pressure_threshold",
+      "lastUpdateTs" : 1629693214932,
+      "longValue" : 420,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_pressure_ws",
+      "lastUpdateTs" : 1660832965533,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_temp_threshold",
+      "lastUpdateTs" : 1629693223309,
+      "longValue" : 110,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oil_temp_ws",
+      "lastUpdateTs" : 1660832965533,
+      "longValue" : 10,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "operationaStatus",
+      "lastUpdateTs" : 1629876544203,
+      "longValue" : null,
+      "strValue" : "breakdown"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "overload_threshold",
+      "lastUpdateTs" : 1629711439086,
+      "longValue" : 90,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.8,
+      "jsonValue" : null,
+      "key" : "power_factor",
+      "lastUpdateTs" : 1626081090280,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "switch_status",
+      "lastUpdateTs" : 1629293607945,
+      "longValue" : null,
+      "strValue" : "On"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "timestamp",
+      "lastUpdateTs" : 1629878582261,
+      "longValue" : 1629878185163,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "underload_threshold",
+      "lastUpdateTs" : 1629711521051,
+      "longValue" : 30,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Contact #",
+      "lastUpdateTs" : 1624787356218,
+      "longValue" : null,
+      "strValue" : "050-1234567"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Electronics",
+      "lastUpdateTs" : 1624787380231,
+      "longValue" : null,
+      "strValue" : "DSE 6110 MKII"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Make / Model",
+      "lastUpdateTs" : 1624787118597,
+      "longValue" : null,
+      "strValue" : "Jet Generators - JP 450"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Supplied By",
+      "lastUpdateTs" : 1624787302968,
+      "longValue" : null,
+      "strValue" : "Jubaili Bros"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Supplier Contact",
+      "lastUpdateTs" : 1624787338364,
+      "longValue" : null,
+      "strValue" : "Mr. Baker"
+    } ]
+  }
+}

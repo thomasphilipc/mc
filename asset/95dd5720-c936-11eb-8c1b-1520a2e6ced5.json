@@ -1,0 +1,39 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1623252184466,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "95dd5720-c936-11eb-8c1b-1520a2e6ced5"
+    },
+    "label" : null,
+    "name" : "uae",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Geographical Location"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "95dd5720-c936-11eb-8c1b-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "8d2bb180-c936-11eb-8c1b-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "tom_test",
+    "createdTime" : 1626324745279,
+    "description" : "test widgets by Tom",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "72d29cf0-e528-11eb-9d0e-1f8899a6f9b3"
+    },
+    "image" : null,
+    "tenantId" : null,
+    "title" : "Tom Test"
+  },
+  "widgets" : [ {
+    "alias" : "donut",
+    "name" : "Donut",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 8,
+      "sizeY" : 5,
+      "resources" : [ {
+        "url" : "https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.27.2/apexcharts.min.js",
+        "isModule" : false
+      } ],
+      "templateHtml" : "<script src=\"https://cdn.jsdelivr.net/npm/apexcharts\"></script>\n<div id=\"piechart\">\n    \n</div>",
+      "templateCss" : ".legend {\n    font-size: 13px;\n    line-height: 10px;\n}\n\n.legend table { \n    border-spacing: 0px;\n    border-collapse: separate;\n}\n\n.mouse-events .flot-overlay {\n    cursor: crosshair; \n}\n\n",
+      "controllerScript" : "self.onInit = function() {\n\n\noptions = {\n  series: [44, 55, 13, 33],\n  dataLabels: {\n    enabled: true,\n    formatter: function (val) {\n      return val.toFixed(2) + \"%\"\n    },\n  },\n  labels: ['Apple', 'Mango', 'Orange', 'Watermelon'],\n    chart: {\n    type: 'donut'\n  }\n}\n\n    var ctx = $('#pieChart', self.ctx.$container);\n    self.ctx.chart = new ApexCharts(document\n        .querySelector(\"#piechart\"), options);\n\n    self.ctx.chart.render();\n}\n\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"First\",\"color\":\"#2196f3\",\"settings\":{\"showLines\":true,\"fillLines\":true,\"showPoints\":false},\"_hash\":0.8587686344902596,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"},{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Second\",\"color\":\"#ffc107\",\"settings\":{\"showLines\":true,\"fillLines\":false,\"showPoints\":false},\"_hash\":0.12775350966079668,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"shadowSize\":4,\"fontColor\":\"#545454\",\"fontSize\":10,\"xaxis\":{\"showLabels\":true,\"color\":\"#545454\"},\"yaxis\":{\"showLabels\":true,\"color\":\"#545454\"},\"grid\":{\"color\":\"#545454\",\"tickColor\":\"#DDDDDD\",\"verticalLines\":true,\"horizontalLines\":true,\"outlineWidth\":1},\"legend\":{\"show\":true,\"position\":\"nw\",\"backgroundColor\":\"#f0f0f0\",\"backgroundOpacity\":0.85,\"labelBoxBorderColor\":\"rgba(1, 1, 1, 0.45)\"},\"decimals\":1,\"stack\":false,\"tooltipIndividual\":false},\"title\":\"Donut\",\"dropShadow\":true,\"enableFullscreen\":true,\"titleStyle\":{\"fontSize\":\"16px\",\"fontWeight\":400},\"mobileHeight\":null}"
+    },
+    "bundleAlias" : "tom_test",
+    "createdTime" : 1626325037494,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "20ff1560-e529-11eb-ad73-1520a2e6ced5"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  } ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1624865187385,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "26865290-d7e2-11eb-b802-1520a2e6ced5"
+    },
+    "label" : "Site",
+    "name" : "(SAI-612/F) Saida Port - Ops",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "26865290-d7e2-11eb-b802-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "aefd26f0-d74a-11eb-99cb-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "5f3ddf50-c927-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "26865290-d7e2-11eb-b802-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837341757,
+      "longValue" : 50,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coordinates",
+      "lastUpdateTs" : 1624896948249,
+      "longValue" : null,
+      "strValue" : "[[33.56896845649933, 35.3699254989624], [33.56333639427137, 35.36155700683594], [33.55707811652397, 35.35951852798462], [33.553930925508354, 35.36507606506348], [33.55856226340838, 35.36898136138915], [33.56324699349646, 35.3675651550293], [33.56594685608942, 35.371363162994385], [33.56896845649933, 35.3699254989624]]"
+    } ]
+  }
+}

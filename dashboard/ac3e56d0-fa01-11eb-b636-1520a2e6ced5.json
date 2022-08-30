@@ -1,0 +1,231 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "",
+      "widgets" : {
+        "16931aa0-4cc9-80f8-e7b2-ed87f2f04c19" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "sizeX" : 50,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(0, 0, 1, 0.04)",
+            "color" : "rgba(255, 254, 254, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<script>\n    function sendRequest() {\n        var devid= self.ctx.data[0].datasource.entityId;\n        var url = \"https://thingsboard.cloud/api/v1/\"+devid+\"/attributes\";\n        var xhr = new XMLHttpRequest();\n        var opt_status = self.ctx.settings.Operational_Status;\n        xhr.open(\"POST\", url);\n        xhr.setRequestHeader('X-Authorization','Bearer '+ localStorage.getItem(\"jwt_token\"));\n    \txhr.setRequestHeader(\"Content-Type\", \"application/json;charset=UTF-8\");\n        xhr.setRequestHeader(\"Accept\", \"application/json\");\n        xhr.setRequestHeader(\"Content-Type\", \"application/json\");\n       // xhr.setRequestHeader(\"Access-Control-Allow-Origin\",\"*\");\n        xhr.onreadystatechange = function() {\n            if (xhr.readyState === 4) {\n                console.log(xhr.status);\n                console.log(xhr.responseText);\n            }\n        };\n        //customerName,timestamp,status,deviceName,type:\"operational_alarm\"\n\n        var msg = '{\"Operational_Status\": opt_status }';\n        var msgType = \"Other\"\n        var metadata = {type:\"operational_alarm\"};\n        \n        var data = {\n            msg: msg,\n            metadata: metadata,\n            msgType: msgType\n        };\n\n        xhr.send(data);\n\n    }\n</script>\n<div class='card'>\n    <div class='description'>\n        <div>\n            <a class=\"mat-button mat-raised-button mat-primary\" onClick='sendRequest()'>\n                <span class=\"mat-button-wrapper\">sendRequest</span>\n            </a>\n        </div>\n    </div>\n</div>",
+              "cardCss" : ".card {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column;\n    color: #fff;\n    text-align: center;\n}\n\n.card .title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 100%;\n    font-weight: bold;\n    font-size: 20px;\n    color: #fff;\n    padding-right: 20px;\n    padding-left: 10px;\n}\n\n.card .description {\n    height: 100%;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    padding-left: 0px;\n    color: #d2ddf8;\n}\n\n.card .description.text {\n    margin-bottom: -20px;\n    margin-top: -25px;\n    font-size: 12px;   \n}\n\n.card .mat-button {\n    text-transform: uppercase;\n    margin-left: 8px;\n    margin-right: 8px;\n}\n\n.card .mat-button:hover {\n    border-bottom: none;\n}\n\ndiv.social {\n\tmargin-left: 10px;\n}\n\n.social a {\n\tdisplay: inline-block;\n\tbackground-image: url(https://thingsboard.io/images/social_sprite.png);\n\tbackground-repeat: no-repeat;\n\tbackground-size: auto;\n\twidth: 50px;\n\theight: 50px;\n\tborder-radius: 5px;\n\tmargin-right: 10px;\n\tborder-bottom: 0;\n}\n\n.social a:hover {\n\t\tbackground-color: #fff;\n}\n\n.social\tspan {\n\t\tposition: absolute;\n\t\tdisplay: block;\n\t\theight: 0;\n\t\toverflow: hidden;\n}\n\na.twitter {\n\tbackground-position: 0 0;\n}\n\na.twitter:hover {\n\tbackground-position: 0 100%;\n}\n\na.youtube {\n\tbackground-position: -300px 0;\n}\n\na.youtube:hover {\n\tbackground-position: -300px 100%;\n}\n\na.facebook {\n\tbackground-position: -350px 0;\n}\n\na.facebook:hover {\n\tbackground-position: -350px 100%;\n}\n\n#download-json-button {\n    display: none;\n}\n\n@media (min-width: 961px) { \n    .card {\n        align-items: flex-start;\n        justify-content: flex-start;\n        flex-direction: row;\n    }\n    .card .title {\n        font-size: 16px;\n        width: 150px;\n    }\n    \n    .card .description {\n        padding-left: 15px;\n    }\n    \n    .card .description.text {\n        margin-bottom: 0px;\n        margin-top: 0px;\n        font-size: 12px;   \n        width: 150px;\n    }\n}\n\n@media (min-width: 1040px) { \n    .card .title {\n        width: 200px;\n    }\n    .card .description.text {\n         width: 200px;\n    }\n}\n\n@media (min-width: 1300px) { \n\n    #download-json-button {\n        display: block;\n    }\n}\n\n@media (min-width: 1610px) { \n    .card .title {\n        width: initial;\n        font-size: 32px;\n    }\n    .card .description.text{\n        width: initial;\n        font-size: 16px;\n    }    \n}"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "mobileOrder" : 0,
+            "mobileHeight" : 3,
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : { },
+            "actions" : { }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "16931aa0-4cc9-80f8-e7b2-ed87f2f04c19"
+        },
+        "33d86a60-4f21-1e2a-9651-edf69d571d85" : {
+          "isSystemType" : false,
+          "bundleAlias" : "custom",
+          "typeAlias" : "test2",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "defaultColor" : "#b66c73",
+              "buttonCss" : ".md-button.md-primary.md-raised {\n font-size: 1.3em; \n}",
+              "buttonText" : "text sample",
+              "buttonLabel" : "Send Request"
+            },
+            "title" : "New button",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "33d86a60-4f21-1e2a-9651-edf69d571d85"
+        },
+        "b499dc80-5aa5-be75-92b1-b2e8a1f87037" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "sizeX" : 50,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(0, 0, 1, 0.04)",
+            "color" : "rgba(255, 254, 254, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<script>\n    function sendRequest() {\n//        var devid= self.ctx.data[0].datasource.entityId;\n        var url = \"https://thingsboard.cloud/api/v1/Genx001/attributes\";\n        var xhr = new XMLHttpRequest();\n//        var opt_status = self.ctx.settings.Operational_Status;\n        xhr.open(\"POST\", url);\n    //     xhr.setRequestHeader('X-Authorization','Bearer '+ localStorage.getItem(\"jwt_token\"));\n    // \txhr.setRequestHeader(\"Content-Type\", \"application/json;charset=UTF-8\");\n        xhr.setRequestHeader(\"Accept\", \"application/json\");\n        xhr.setRequestHeader(\"Content-Type\", \"application/json\");\n       // xhr.setRequestHeader(\"Access-Control-Allow-Origin\",\"*\");\n        xhr.onreadystatechange = function() {\n            if (xhr.readyState === 4) {\n                console.log(xhr.status);\n                console.log(xhr.responseText);\n            }\n        };\n        //customerName,timestamp,status,deviceName,type:\"operational_alarm\"\n\n        var msg = {\"deviceName\": \"Genx001\",\n                \"operationalStatus\":\"In Operation\",\n                \"customerName\":\"dev@vectorglobe.com\",\n                \"timestamp\":Date()};\n        var data = {\n            msg: msg\n        };\n        //console.log(JSON.stringify(data));\n        xhr.send(JSON.stringify(data));\n\n    }\n</script>\n<div class='card'>\n    <div class='description'>\n        <div>\n            <a class=\"mat-button mat-raised-button mat-primary\" onClick='sendRequest()'>\n                <span class=\"mat-button-wrapper\">sendRequest</span>\n            </a>\n        </div>\n    </div>\n</div>",
+              "cardCss" : ".card {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column;\n    color: #fff;\n    text-align: center;\n}\n\n.card .title {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: 100%;\n    font-weight: bold;\n    font-size: 20px;\n    color: #fff;\n    padding-right: 20px;\n    padding-left: 10px;\n}\n\n.card .description {\n    height: 100%;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    padding-left: 0px;\n    color: #d2ddf8;\n}\n\n.card .description.text {\n    margin-bottom: -20px;\n    margin-top: -25px;\n    font-size: 12px;   \n}\n\n.card .mat-button {\n    text-transform: uppercase;\n    margin-left: 8px;\n    margin-right: 8px;\n}\n\n.card .mat-button:hover {\n    border-bottom: none;\n}\n\ndiv.social {\n\tmargin-left: 10px;\n}\n\n.social a {\n\tdisplay: inline-block;\n\tbackground-image: url(https://thingsboard.io/images/social_sprite.png);\n\tbackground-repeat: no-repeat;\n\tbackground-size: auto;\n\twidth: 50px;\n\theight: 50px;\n\tborder-radius: 5px;\n\tmargin-right: 10px;\n\tborder-bottom: 0;\n}\n\n.social a:hover {\n\t\tbackground-color: #fff;\n}\n\n.social\tspan {\n\t\tposition: absolute;\n\t\tdisplay: block;\n\t\theight: 0;\n\t\toverflow: hidden;\n}\n\na.twitter {\n\tbackground-position: 0 0;\n}\n\na.twitter:hover {\n\tbackground-position: 0 100%;\n}\n\na.youtube {\n\tbackground-position: -300px 0;\n}\n\na.youtube:hover {\n\tbackground-position: -300px 100%;\n}\n\na.facebook {\n\tbackground-position: -350px 0;\n}\n\na.facebook:hover {\n\tbackground-position: -350px 100%;\n}\n\n#download-json-button {\n    display: none;\n}\n\n@media (min-width: 961px) { \n    .card {\n        align-items: flex-start;\n        justify-content: flex-start;\n        flex-direction: row;\n    }\n    .card .title {\n        font-size: 16px;\n        width: 150px;\n    }\n    \n    .card .description {\n        padding-left: 15px;\n    }\n    \n    .card .description.text {\n        margin-bottom: 0px;\n        margin-top: 0px;\n        font-size: 12px;   \n        width: 150px;\n    }\n}\n\n@media (min-width: 1040px) { \n    .card .title {\n        width: 200px;\n    }\n    .card .description.text {\n         width: 200px;\n    }\n}\n\n@media (min-width: 1300px) { \n\n    #download-json-button {\n        display: block;\n    }\n}\n\n@media (min-width: 1610px) { \n    .card .title {\n        width: initial;\n        font-size: 32px;\n    }\n    .card .description.text{\n        width: initial;\n        font-size: 16px;\n    }    \n}"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "mobileOrder" : 0,
+            "mobileHeight" : 3,
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : { },
+            "actions" : { }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "b499dc80-5aa5-be75-92b1-b2e8a1f87037"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "javascript http request",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "16931aa0-4cc9-80f8-e7b2-ed87f2f04c19" : {
+                  "sizeX" : 7,
+                  "sizeY" : 6,
+                  "mobileOrder" : 0,
+                  "mobileHeight" : 3,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "33d86a60-4f21-1e2a-9651-edf69d571d85" : {
+                  "sizeX" : 7,
+                  "sizeY" : 3,
+                  "row" : 6,
+                  "col" : 0
+                },
+                "b499dc80-5aa5-be75-92b1-b2e8a1f87037" : {
+                  "sizeX" : 7,
+                  "sizeY" : 6,
+                  "mobileOrder" : 0,
+                  "mobileHeight" : 3,
+                  "row" : 9,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "color" : "rgba(0,0,0,0.870588)",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : { },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "interval" : 1000,
+          "timewindowMs" : 60000
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1628530374923,
+            "endTimeMs" : 1628616774923
+          }
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "createdTime" : 1628617065661,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "ac3e56d0-fa01-11eb-b636-1520a2e6ced5"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "javascript http request",
+    "ownerId" : null,
+    "tenantId" : null,
+    "title" : "javascript http request"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

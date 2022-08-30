@@ -1,0 +1,133 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "create and clear load alarms"
+    },
+    "configuration" : null,
+    "createdTime" : 1623210577980,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "cee9dab0-0406-11ec-9abb-5589a771cc7b"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "b67767c0-c8d5-11eb-8c1b-1520a2e6ced5"
+    },
+    "name" : "Create & Clear load Alarms",
+    "root" : false,
+    "tenantId" : null,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "False"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 2,
+      "type" : "True"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 0,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 3,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "If load not normal",
+        "layoutX" : 316,
+        "layoutY" : 153
+      },
+      "configuration" : {
+        "jsScript" : "return msg.load_status != 'Normal'"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "885f5e00-c8d6-11eb-8c1b-1520a2e6ced5"
+      },
+      "name" : "Load condition",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 582,
+        "layoutY" : 214
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\ndetails.clearedload = msg.load_status;\n\nreturn details;",
+        "alarmType" : "Load Alarm"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "886132c0-c8d6-11eb-8c1b-1520a2e6ced5"
+      },
+      "name" : "clear alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "create load alarm",
+        "layoutX" : 576,
+        "layoutY" : 94
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\ndetails.load_status = msg.load_status;\n\nif (metadata.prevAlarmDetails) {\n    var prevDetails = JSON.parse(metadata.prevAlarmDetails);\n    details.count = prevDetails.count + 1;\n} else {\n    details.count = 1;\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "alarmType" : "Load Alarm",
+        "severity" : "MAJOR",
+        "propagate" : true,
+        "relationTypes" : [ ]
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "88626b40-c8d6-11eb-8c1b-1520a2e6ced5"
+      },
+      "name" : "load alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 184,
+        "layoutY" : 45
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "Operational_Status" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : true
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "cee9dab0-0406-11ec-9abb-5589a771cc7b"
+      },
+      "name" : "operational status",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

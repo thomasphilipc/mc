@@ -1,0 +1,67 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1624865114886,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "fb4fda60-d7e1-11eb-b802-1520a2e6ced5"
+    },
+    "label" : "Site",
+    "name" : "(NAT-901/N) National Theater - Nigeria",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "af419370-c927-11eb-ae0e-1f8899a6f9b3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "fb4fda60-d7e1-11eb-b802-1520a2e6ced5"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "fb4fda60-d7e1-11eb-b802-1520a2e6ced5"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "db39eb90-d74a-11eb-ae0e-1f8899a6f9b3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "aggregate_performance",
+      "lastUpdateTs" : 1661837346173,
+      "longValue" : 90,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "coordinates",
+      "lastUpdateTs" : 1624893709828,
+      "longValue" : null,
+      "strValue" : "[[6.475101638905839, 3.3670198917388916], [6.4742807877207715, 3.3701419830322266], [6.469686128529023, 3.372148275375366], [6.470283116772453, 3.3752059936523433], [6.471871528484463, 3.376944065093994], [6.475933149135106, 3.3745622634887695], [6.480623693996891, 3.368328809738159], [6.480261244357671, 3.3677172660827637], [6.478321068331526, 3.3682751655578613], [6.475101638905839, 3.3670198917388916]]"
+    } ]
+  }
+}

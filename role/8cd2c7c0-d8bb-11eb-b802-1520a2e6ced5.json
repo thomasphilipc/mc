@@ -1,0 +1,32 @@
+{
+  "entityType" : "ROLE",
+  "entity" : {
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "name" : "Jubaili End User",
+    "permissions" : {
+      "ASSET_GROUP" : [ "READ" ],
+      "ASSET" : [ "READ" ],
+      "DEVICE" : [ "READ" ],
+      "DEVICE_GROUP" : [ "READ" ]
+    },
+    "tenantId" : null,
+    "type" : "GENERIC",
+    "additionalInfo" : {
+      "description" : "Test Jubaili End-User"
+    },
+    "createdTime" : 1624958559804,
+    "id" : {
+      "entityType" : "ROLE",
+      "id" : "8cd2c7c0-d8bb-11eb-b802-1520a2e6ced5"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

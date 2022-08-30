@@ -1,0 +1,208 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "widgets" : {
+        "691f2e8d-c95e-03e0-ff7e-88231af2a869" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "Timeseries Line Chart",
+          "sizeX" : 16,
+          "sizeY" : 10,
+          "row" : 0,
+          "col" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "8ff82881-dfa0-a764-b555-18eca6f09083",
+              "dataKeys" : [ {
+                "name" : "fuel_level",
+                "label" : "fuel_level",
+                "type" : "timeseries",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.9846183266213457
+              }, {
+                "name" : "engine_hour_meter",
+                "label" : "engine_hour_meter",
+                "type" : "timeseries",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.010867455929879588
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#545454",
+                "max" : 2000
+              },
+              "grid" : {
+                "color" : "#545454",
+                "tickColor" : "#DDDDDD",
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1
+              },
+              "stack" : false,
+              "tooltipIndividual" : false,
+              "timeForComparison" : "previousInterval",
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "showLabels" : true
+              }
+            },
+            "title" : "Timeseries Line Chart",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "mobileHeight" : null
+          },
+          "id" : "691f2e8d-c95e-03e0-ff7e-88231af2a869"
+        },
+        "45555098-becc-5bc2-ceb3-76bd29241100" : {
+          "isSystemType" : false,
+          "bundleAlias" : "gauge_arc",
+          "typeAlias" : "status_update",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7,
+          "sizeY" : 5.5,
+          "config" : {
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>HTML code here</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "New Status Update",
+            "dropShadow" : true,
+            "targetDeviceAliases" : [ ],
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "8ff82881-dfa0-a764-b555-18eca6f09083" ]
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "45555098-becc-5bc2-ceb3-76bd29241100"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "device_1",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "691f2e8d-c95e-03e0-ff7e-88231af2a869" : {
+                  "sizeX" : 14,
+                  "sizeY" : 8,
+                  "mobileHeight" : null,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "45555098-becc-5bc2-ceb3-76bd29241100" : {
+                  "sizeX" : 7,
+                  "sizeY" : 5,
+                  "row" : 8,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "color" : "rgba(0,0,0,0.870588)",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "8ff82881-dfa0-a764-b555-18eca6f09083" : {
+          "id" : "8ff82881-dfa0-a764-b555-18eca6f09083",
+          "alias" : "Device 1",
+          "filter" : {
+            "type" : "singleEntity",
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "3677fe30-e2df-11eb-aca6-1520a2e6ced5"
+            },
+            "resolveMultiple" : false
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "hideInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "timewindowMs" : 18000000,
+          "quickInterval" : "CURRENT_DAY",
+          "interval" : 1000
+        },
+        "aggregation" : {
+          "type" : "NONE",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "createdTime" : 1626077252633,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "35b5d090-e2e8-11eb-9d0e-1f8899a6f9b3"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "device_1",
+    "ownerId" : null,
+    "tenantId" : null,
+    "title" : "device_1"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

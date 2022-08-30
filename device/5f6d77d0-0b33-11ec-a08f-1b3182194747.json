@@ -1,0 +1,97 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : true,
+      "overwriteActivityTime" : true,
+      "description" : ""
+    },
+    "createdTime" : 1630507581389,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "fc788540-c440-11eb-853d-1520a2e6ced5"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "5f6d77d0-0b33-11ec-a08f-1b3182194747"
+    },
+    "label" : "rpi",
+    "name" : "rpi4",
+    "ownerId" : null,
+    "softwareId" : null,
+    "tenantId" : null,
+    "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "rpi4",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1631422812082,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "current_configuration",
+      "lastUpdateTs" : 1631418534927,
+      "longValue" : null,
+      "strValue" : "eyJ0aGluZ3Nib2FyZCI6IHsidGhpbmdzYm9hcmQiOiB7Imhvc3QiOiAidGhpbmdzYm9hcmQuY2xvdWQiLCAicG9ydCI6IDE4ODMsICJyZW1vdGVTaGVsbCI6IHRydWUsICJyZW1vdGVDb25maWd1cmF0aW9uIjogdHJ1ZSwgInN0YXRzU2VuZFBlcmlvZEluU2Vjb25kcyI6IDMwMCwgImNoZWNrQ29ubmVjdG9yc0NvbmZpZ3VyYXRpb25JblNlY29uZHMiOiA2MCwgInNlY3VyaXR5IjogeyJhY2Nlc3NUb2tlbiI6ICJycGk0In0sICJxb3MiOiAxfSwgInN0b3JhZ2UiOiB7InR5cGUiOiAibWVtb3J5IiwgInJlYWRfcmVjb3Jkc19jb3VudCI6IDEwMCwgIm1heF9yZWNvcmRzX2NvdW50IjogMTAwMDAwfSwgImNvbm5lY3RvcnMiOiBbeyJuYW1lIjogIk1RVFQgQnJva2VyIENvbm5lY3RvciIsICJ0eXBlIjogIm1xdHQiLCAiY29uZmlndXJhdGlvbiI6ICJtcXR0Lmpzb24ifV0sICJsb2dzIjogIlcyeHZaMmRsY25OZGZYMXJaWGx6UFhKdmIzUXNJSE5sY25acFkyVXNJR052Ym01bFkzUnZjaXdnWTI5dWRtVnlkR1Z5TENCMFlsOWpiMjV1WldOMGFXOXVMQ0J6ZEc5eVlXZGxMQ0JsZUhSbGJuTnBiMjU5ZlZ0b1lXNWtiR1Z5YzExOWZXdGxlWE05WTI5dWMyOXNaVWhoYm1Sc1pYSXNJSE5sY25acFkyVklZVzVrYkdWeUxDQmpiMjV1WldOMGIzSklZVzVrYkdWeUxDQmpiMjUyWlhKMFpYSklZVzVrYkdWeUxDQjBZbDlqYjI1dVpXTjBhVzl1U0dGdVpHeGxjaXdnYzNSdmNtRm5aVWhoYm1Sc1pYSXNJR1Y0ZEdWdWMybHZia2hoYm1Sc1pYSjlmVnRtYjNKdFlYUjBaWEp6WFgxOWEyVjVjejFNYjJkR2IzSnRZWFIwWlhKOWZWdHNiMmRuWlhKZmNtOXZkRjE5Zld4bGRtVnNQVVZTVWs5U2ZYMW9ZVzVrYkdWeWN6MWpiMjV6YjJ4bFNHRnVaR3hsY24xOVcyeHZaMmRsY2w5amIyNXVaV04wYjNKZGZYMXNaWFpsYkQxSlRrWlBmWDFvWVc1a2JHVnljejFqYjI1dVpXTjBiM0pJWVc1a2JHVnlmWDFtYjNKdFlYUjBaWEk5VEc5blJtOXliV0YwZEdWeWZYMXhkV0ZzYm1GdFpUMWpiMjV1WldOMGIzSjlmVnRzYjJkblpYSmZjM1J2Y21GblpWMTlmV3hsZG1Wc1BVbE9Sazk5ZldoaGJtUnNaWEp6UFhOMGIzSmhaMlZJWVc1a2JHVnlmWDFtYjNKdFlYUjBaWEk5VEc5blJtOXliV0YwZEdWeWZYMXhkV0ZzYm1GdFpUMXpkRzl5WVdkbGZYMWJiRzluWjJWeVgzUmlYMk52Ym01bFkzUnBiMjVkZlgxc1pYWmxiRDFKVGtaUGZYMW9ZVzVrYkdWeWN6MTBZbDlqYjI1dVpXTjBhVzl1U0dGdVpHeGxjbjE5Wm05eWJXRjBkR1Z5UFV4dlowWnZjbTFoZEhSbGNuMTljWFZoYkc1aGJXVTlkR0pmWTI5dWJtVmpkR2x2Ym4xOVcyeHZaMmRsY2w5elpYSjJhV05sWFgxOWJHVjJaV3c5U1U1R1QzMTlhR0Z1Wkd4bGNuTTljMlZ5ZG1salpVaGhibVJzWlhKOWZXWnZjbTFoZEhSbGNqMU1iMmRHYjNKdFlYUjBaWEo5ZlhGMVlXeHVZVzFsUFhObGNuWnBZMlY5ZlZ0c2IyZG5aWEpmWTI5dWRtVnlkR1Z5WFgxOWJHVjJaV3c5U1U1R1QzMTlhR0Z1Wkd4bGNuTTlZMjl1ZG1WeWRHVnlTR0Z1Wkd4bGNuMTlabTl5YldGMGRHVnlQVXh2WjBadmNtMWhkSFJsY24xOWNYVmhiRzVoYldVOVkyOXVkbVZ5ZEdWeWZYMWJiRzluWjJWeVgyVjRkR1Z1YzJsdmJsMTlmV3hsZG1Wc1BVbE9Sazk5ZldoaGJtUnNaWEp6UFdOdmJtNWxZM1J2Y2toaGJtUnNaWEo5ZldadmNtMWhkSFJsY2oxTWIyZEdiM0p0WVhSMFpYSjlmWEYxWVd4dVlXMWxQV1Y0ZEdWdWMybHZibjE5VzJoaGJtUnNaWEpmWTI5dWMyOXNaVWhoYm1Sc1pYSmRmWDFqYkdGemN6MVRkSEpsWVcxSVlXNWtiR1Z5Zlgxc1pYWmxiRDFKVGtaUGZYMW1iM0p0WVhSMFpYSTlURzluUm05eWJXRjBkR1Z5ZlgxaGNtZHpQU2h6ZVhNdWMzUmtiM1YwTENsOWZWdG9ZVzVrYkdWeVgyTnZibTVsWTNSdmNraGhibVJzWlhKZGZYMXNaWFpsYkQxSlRrWlBmWDFqYkdGemN6MXNiMmRuYVc1bkxtaGhibVJzWlhKekxsUnBiV1ZrVW05MFlYUnBibWRHYVd4bFNHRnVaR3hsY24xOVptOXliV0YwZEdWeVBVeHZaMFp2Y20xaGRIUmxjbjE5WVhKbmN6MG9JaTkyWVhJdmJHOW5MM1JvYVc1bmMySnZZWEprTFdkaGRHVjNZWGt2WTI5dWJtVmpkRzl5TG14dlp5SXNJQ0prSWl3Z01Td2dOeXdwZlgxYmFHRnVaR3hsY2w5emRHOXlZV2RsU0dGdVpHeGxjbDE5Zld4bGRtVnNQVWxPUms5OWZXTnNZWE56UFd4dloyZHBibWN1YUdGdVpHeGxjbk11VkdsdFpXUlNiM1JoZEdsdVowWnBiR1ZJWVc1a2JHVnlmWDFtYjNKdFlYUjBaWEk5VEc5blJtOXliV0YwZEdWeWZYMWhjbWR6UFNnaUwzWmhjaTlzYjJjdmRHaHBibWR6WW05aGNtUXRaMkYwWlhkaGVTOXpkRzl5WVdkbExteHZaeUlzSUNKa0lpd2dNU3dnTnl3cGZYMWJhR0Z1Wkd4bGNsOXpaWEoyYVdObFNHRnVaR3hsY2wxOWZXeGxkbVZzUFVsT1JrOTlmV05zWVhOelBXeHZaMmRwYm1jdWFHRnVaR3hsY25NdVZHbHRaV1JTYjNSaGRHbHVaMFpwYkdWSVlXNWtiR1Z5ZlgxbWIzSnRZWFIwWlhJOVRHOW5SbTl5YldGMGRHVnlmWDFoY21kelBTZ2lMM1poY2k5c2IyY3ZkR2hwYm1kelltOWhjbVF0WjJGMFpYZGhlUzl6WlhKMmFXTmxMbXh2WnlJc0lDSmtJaXdnTVN3Z055d3BmWDFiYUdGdVpHeGxjbDlqYjI1MlpYSjBaWEpJWVc1a2JHVnlYWDE5YkdWMlpXdzlTVTVHVDMxOVkyeGhjM005Ykc5bloybHVaeTVvWVc1a2JHVnljeTVVYVcxbFpGSnZkR0YwYVc1blJtbHNaVWhoYm1Sc1pYSjlmV1p2Y20xaGRIUmxjajFNYjJkR2IzSnRZWFIwWlhKOWZXRnlaM005S0NJdmRtRnlMMnh2Wnk5MGFHbHVaM05pYjJGeVpDMW5ZWFJsZDJGNUwyTnZiblpsY25SbGNpNXNiMmNpTENBaVpDSXNJREVzSURNc0tYMTlXMmhoYm1Sc1pYSmZaWGgwWlc1emFXOXVTR0Z1Wkd4bGNsMTlmV3hsZG1Wc1BVbE9Sazk5ZldOc1lYTnpQV3h2WjJkcGJtY3VhR0Z1Wkd4bGNuTXVWR2x0WldSU2IzUmhkR2x1WjBacGJHVklZVzVrYkdWeWZYMW1iM0p0WVhSMFpYSTlURzluUm05eWJXRjBkR1Z5ZlgxaGNtZHpQU2dpTDNaaGNpOXNiMmN2ZEdocGJtZHpZbTloY21RdFoyRjBaWGRoZVM5bGVIUmxibk5wYjI0dWJHOW5JaXdnSW1RaUxDQXhMQ0F6TENsOWZWdG9ZVzVrYkdWeVgzUmlYMk52Ym01bFkzUnBiMjVJWVc1a2JHVnlYWDE5YkdWMlpXdzlTVTVHVDMxOVkyeGhjM005Ykc5bloybHVaeTVvWVc1a2JHVnljeTVVYVcxbFpGSnZkR0YwYVc1blJtbHNaVWhoYm1Sc1pYSjlmV1p2Y20xaGRIUmxjajFNYjJkR2IzSnRZWFIwWlhKOWZXRnlaM005S0NJdmRtRnlMMnh2Wnk5MGFHbHVaM05pYjJGeVpDMW5ZWFJsZDJGNUwzUmlYMk52Ym01bFkzUnBiMjR1Ykc5bklpd2dJbVFpTENBeExDQXpMQ2w5ZlZ0bWIzSnRZWFIwWlhKZlRHOW5SbTl5YldGMGRHVnlYWDE5Wm05eWJXRjBQU0lsS0dGelkzUnBiV1VwY3lBdElDVW9iR1YyWld4dVlXMWxLWE1nTFNCYkpTaG1hV3hsYm1GdFpTbHpYU0F0SUNVb2JXOWtkV3hsS1hNZ0xTQWxLR3hwYm1WdWJ5bGtJQzBnSlNodFpYTnpZV2RsS1hNaUlIMTlaR0YwWldadGREMGlKVmt0SlcwdEpXUWdKVWc2SlUwNkpWTWlmWDA9In19"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1631422812082,
+      "longValue" : 1631422812080,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1631422173344,
+      "longValue" : 1631422171356,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1631418581341,
+      "longValue" : 1631418581341,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1631422473339,
+      "longValue" : 1631422473339,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

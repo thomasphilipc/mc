@@ -1,0 +1,36 @@
+{
+  "entityType" : "ROLE",
+  "entity" : {
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "0a7b49e0-c9f3-11eb-ae0e-1f8899a6f9b3"
+    },
+    "externalId" : null,
+    "name" : "POC User",
+    "permissions" : {
+      "ASSET" : [ "READ" ],
+      "ASSET_GROUP" : [ "READ" ],
+      "DEVICE" : [ "READ" ],
+      "DEVICE_GROUP" : [ "READ" ],
+      "WIDGET_TYPE" : [ "ALL" ]
+    },
+    "tenantId" : null,
+    "type" : "GENERIC",
+    "additionalInfo" : {
+      "description" : "Jubaili POC User"
+    },
+    "createdTime" : 1624958987741,
+    "id" : {
+      "entityType" : "ROLE",
+      "id" : "8be4c8d0-d8bc-11eb-b802-1520a2e6ced5"
+    },
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "0a7b49e0-c9f3-11eb-ae0e-1f8899a6f9b3"
+    }
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

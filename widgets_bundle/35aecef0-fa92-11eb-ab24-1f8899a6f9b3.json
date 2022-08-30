@@ -1,0 +1,48 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "custom",
+    "createdTime" : 1628679143775,
+    "description" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "35aecef0-fa92-11eb-ab24-1f8899a6f9b3"
+    },
+    "image" : null,
+    "tenantId" : null,
+    "title" : "Custom Button"
+  },
+  "widgets" : [ {
+    "alias" : "test2",
+    "name" : "button",
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "static",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ ],
+      "templateHtml" : "<div fxFlex fxLayout=\"column\" style=\"height:100%\">\n    <button mat-raised-button color=\"primary\" (click)=\"onButtonClick($event)\"\n        (mouseover)=\"onMouseOver()\"\n        (mouseleave)=\"onMouseLeave()\"\n        [ngStyle]=\"{'background-color': buttonColor}\">\n        <div style=\"height: 100%; width: 100%;\" fxLayout=\"column\" fxLayoutAlign=\"center\">\n            {{defaultText}}\n        </div>    \n    </button>\n</div>",
+      "templateCss" : "#container {\n    overflow: auto;\n}\n\n.mat-raised-button {    \n    color: #fff;\n    height: 100%;\n    margin: 0;\n}\n",
+      "controllerScript" : "self.onInit = function() {\n  \n    var cssParser = new cssjs();\n    cssParser.testMode = false;\n    var namespace = 'button-card-' + hashCode(self.ctx.settings.buttonCss);\n    cssParser.cssPreviewNamespace = namespace;\n    cssParser.createStyleElement(namespace, self.ctx.settings.buttonCss);\n    self.ctx.$container.addClass(namespace);\n    var $scope = self.ctx.$scope;\n    self.defaultColor = self.ctx.settings.defaultColor;\n    self.defaultText = self.ctx.settings.buttonText;\n    console.log(self.defaultText);\n    self.hoverColor = tinycolor(self.ctx.settings.defaultColor).lighten(10).toHexString();\n    $scope.buttonColor = self.defaultColor;\n    $scope.buttonLabel = self.ctx.settings.buttonLabel;\n    $scope.onButtonClick = function($event) {\n        if (!self.ctx.isEdit) {\n            if ($event) {\n                $event.stopPropagation();\n            }\n            var descriptors = self.ctx.actionsApi\n                .getActionDescriptors(\n                    'rowClick');\n            self.ctx.actionsApi.handleWidgetAction(\n                $event, descriptors[0]);\n        }\n    };\n    $scope.onMouseOver = function() {\n        $scope.buttonColor = self.hoverColor;\n    };\n    $scope.onMouseLeave = function() {\n        $scope.buttonColor = self.defaultColor;\n    };\n    \n    function hashCode(str) {\n        var hash = 0;\n        var i, char;\n        if (str.length === 0) return hash;\n        for (i = 0; i < str.length; i++) {\n            char = str.charCodeAt(i);\n            hash = ((hash << 5) - hash) + char;\n            hash = hash & hash;\n        }\n        return hash;\n    }\n    \n};\n\nself.onDataUpdated = function() {\n};\n\n\nself.onResize = function() {}\n\nself.onDestroy = function() {\n\n};\n\nself.actionSources = function() {\n    return {\n        'rowClick': {\n            name: 'widget-action.row-click',\n            multiple: false\n        }\n    };\n};",
+      "settingsSchema" : "{\n    \"schema\": {\n        \"type\": \"object\",\n        \"title\": \"Settings\",\n        \"properties\": {\n            \"buttonLabel\": {\n                \"default\": \"Présence default\",\n                \"type\": \"string\",\n                \"title\": \"Button label\"\n            },\n            \"defaultColor\": {\n                \"title\": \"Default color\",\n                \"type\": \"string\",\n                \"default\": null\n            },\n            \"buttonCss\": {\n                \"title\": \"Button CSS\",\n                \"type\": \"string\",\n                \"default\": \".md-button.md-primary.md-raised {\\n font-size: 1.3em; \\n}\"\n            },\n            \"buttonText\": {\n                \"default\": \"Présence default\",\n                \"type\": \"string\",\n                \"title\": \"Button Text\"\n            }\n            \n        }\n    },\n        \"form\": [\n            \"buttonLabel\",\n            \"buttonText\",\n            \n            {\n                \"key\": \"defaultColor\",\n                \"type\": \"color\"\n            },\n            {\n                \"key\": \"buttonCss\",\n                \"type\": \"css\"\n            }  \n        ]\n}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"static\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.20791288001438435,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"0px\",\"settings\":{\"defaultColor\":\"#b66c73\",\"buttonLabel\":\"no label\",\"buttonCss\":\".md-button.md-primary.md-raised {\\n font-size: 1.3em; \\n}\",\"buttonText\":\"text sample\"},\"title\":\"button\",\"dropShadow\":true,\"enableFullscreen\":false,\"enableDataExport\":false,\"widgetStyle\":{},\"titleStyle\":{\"fontSize\":\"16px\",\"fontWeight\":400},\"useDashboardTimewindow\":true,\"showLegend\":false,\"actions\":{}}"
+    },
+    "bundleAlias" : "custom",
+    "createdTime" : 1628679144086,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "35de4360-fa92-11eb-b636-1520a2e6ced5"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "fc768970-c440-11eb-853d-1520a2e6ced5"
+    }
+  } ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

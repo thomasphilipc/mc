@@ -1,0 +1,218 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "createdTime" : 1629789552890,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "c5a3ae40-04ab-11ec-9abb-5589a771cc7b"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "951765a0-04ab-11ec-9abb-5589a771cc7b"
+    },
+    "name" : "Operational Status Alarms",
+    "root" : false,
+    "tenantId" : null,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 6,
+      "type" : "Created"
+    } ],
+    "firstNodeIndex" : 2,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 577,
+        "layoutY" : 260
+      },
+      "configuration" : {
+        "jsScript" : "var msg = {\"Operational_Status\":msg.Operational_Status};\n\n\nreturn {msg: msg, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b939f910-05b0-11ec-9abb-5589a771cc7b"
+      },
+      "name" : "To Attributes",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 533,
+        "layoutY" : 365
+      },
+      "configuration" : {
+        "fromTemplate" : "",
+        "toTemplate" : "ali.khan@vectorglobe.com",
+        "ccTemplate" : null,
+        "bccTemplate" : null,
+        "subjectTemplate" : "Operational Status Changed to \"${Operational_Status}\"",
+        "mailBodyType" : "false",
+        "isHtmlTemplate" : null,
+        "bodyTemplate" : "Operational Status of ${deviceName} is marked as \"${Operational_Status}\" by ${customerName} at ${timestamp}"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "bb296cc0-064f-11ec-9ca5-df93c5e7eea4"
+      },
+      "name" : "Operational Status Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 312,
+        "layoutY" : 151
+      },
+      "configuration" : {
+        "jsScript" : "metadata = msg.msg;\nmetadata.timestamp = Date(metadata.timestamp).toLocaleString();\n\nreturn {msg: metadata, metadata: metadata};"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c5a3ae40-04ab-11ec-9abb-5589a771cc7b"
+      },
+      "name" : "Format Metadata for Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 900,
+        "layoutY" : 261
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "05f252c0-05b1-11ec-960e-17365a3bf2ac"
+      },
+      "name" : "save operational status",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 828,
+        "layoutY" : 366
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : true,
+        "smtpHost" : "localhost",
+        "smtpPort" : 25,
+        "username" : null,
+        "password" : null,
+        "smtpProtocol" : "smtp",
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3bfc5b60-064f-11ec-9ca5-df93c5e7eea4"
+      },
+      "name" : "send mail",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 611,
+        "layoutY" : 153
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\n\ndetails.operationalStatus =metadata.Operational_Status;\ndetails.customerName =metadata.customerName;\ndetails.timestamp =metadata.timestamp;\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "alarmType" : "Operational Alarm",
+        "severity" : "INDETERMINATE",
+        "propagate" : false,
+        "relationTypes" : [ ]
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5a5b1f50-04ac-11ec-960e-17365a3bf2ac"
+      },
+      "name" : "Create Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 891,
+        "layoutY" : 153
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\nreturn details;",
+        "alarmType" : "Operational Alarm"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5a5d6940-04ac-11ec-960e-17365a3bf2ac"
+      },
+      "name" : "Clear Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
